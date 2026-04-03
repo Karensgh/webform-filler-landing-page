@@ -14,7 +14,7 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   title: "OneEntry - Stop retyping your applications.",
-  description: "Save your information once, and let AI autofill applications, forms, and PDFs across websites — without rewriting the same answers again and again.",
+  description: "Enter your information once, then reuse it across job, scholarship, accelerator, and grant applications.",
 };
 
 export default function RootLayout({
