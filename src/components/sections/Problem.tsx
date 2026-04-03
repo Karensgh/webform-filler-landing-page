@@ -4,19 +4,24 @@ import { motion } from "framer-motion";
 
 const useCases = [
     {
-        title: "Job seekers",
-        description: "Applying to 300 jobs this week? Your time shouldn't be spent on copy-pasting your work history into all job websites. Let AuFill handle it.",
+        title: "Job and internship applications",
+        description: "Upload your resume, then re-enter your work history, education, links, and personal details across every application portal. OneEntry keeps those answers ready.",
         gradient: "from-blue-100 to-indigo-100"
     },
     {
-        title: "Students",
-        description: "Another scholarship portal asking for your address, GPA, and essay — again? Fill it once, reuse it everywhere.",
+        title: "School and scholarship applications",
+        description: "Reuse your GPA, school history, demographic info, essays, and recommendation details instead of rewriting them for each new portal.",
         gradient: "from-fuchsia-100 to-purple-100"
     },
     {
-        title: "Founders",
-        description: "Accelerator applications, grant portals, investor forms. Your team bios and traction numbers shouldn't need to be retyped every time.",
+        title: "Accelerator applications",
+        description: "Keep your team bios, traction, market, and company story ready for each new accelerator form instead of reshaping the basics from scratch.",
         gradient: "from-emerald-100 to-teal-100"
+    },
+    {
+        title: "Grant applications",
+        description: "Reuse your organization background, programs, outcomes, budgets, and boilerplate answers even when each funder asks for them differently.",
+        gradient: "from-amber-100 to-orange-100"
     }
 ];
 
@@ -31,20 +36,20 @@ export function Problem() {
                         viewport={{ once: true }}
                         className="text-3xl md:text-4xl font-bold text-slate-900 mb-4"
                     >
-                        The internet keeps asking for the same information.
+                        Best for repetitive applications.
                     </motion.h2>
-                    {/* <motion.p
+                    <motion.p
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
                         className="text-lg text-slate-600"
                     >
-                        It&apos;s a straightforward problem but has existed for so many years. You upload, re-type, copy, paste, and repeat.
-                    </motion.p> */}
+                        It's simple. When every portal asks for the same information in a different format, OneEntry helps you reuse what you&apos;ve already written.
+                    </motion.p>
                 </div>
 
-                <div className="max-w-2xl mx-auto flex flex-col gap-6">
+                <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
                     {useCases.map((useCase, idx) => (
                         <motion.div
                             key={idx}
@@ -52,7 +57,7 @@ export function Problem() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1, duration: 0.4 }}
-                            className="rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-lg transition-shadow bg-white flex flex-row items-stretch group"
+                            className="rounded-3xl border border-slate-200/60 overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 bg-white flex flex-row items-stretch group h-full hover:-translate-y-1"
                         >
                             <div className={`w-2 shrink-0 bg-gradient-to-b ${useCase.gradient}`} />
                             <div className="p-6 flex-1">

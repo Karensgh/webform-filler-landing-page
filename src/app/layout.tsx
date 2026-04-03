@@ -13,7 +13,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "AuFill - Fill once. Apply everywhere.",
+  title: "OneEntry - Stop retyping your applications.",
   description: "Save your information once, and let AI autofill applications, forms, and PDFs across websites — without rewriting the same answers again and again.",
 };
 

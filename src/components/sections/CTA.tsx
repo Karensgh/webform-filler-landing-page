@@ -66,7 +66,7 @@ export function CTA() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="relative bg-slate-900 rounded-[2.5rem] overflow-hidden p-12 md:p-20 text-center border border-slate-800"
+                    className="relative bg-[#0B1121] rounded-[3rem] overflow-hidden p-12 md:p-20 text-center border border-slate-800/60 shadow-2xl shadow-indigo-900/20"
                 >
                     {/* Background Glows */}
                     <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-indigo-500/20 blur-[100px] rounded-full -translate-y-1/2 translate-x-1/3 pointer-events-none" />
@@ -104,13 +104,13 @@ export function CTA() {
                                             name="email"
                                             placeholder="Enter your email address"
                                             required
-                                            className="h-14 bg-white/5 border-white/10 text-white placeholder:text-slate-400 focus-visible:ring-indigo-500 focus-visible:ring-offset-slate-900 rounded-full px-6 flex-1 text-base"
+                                            className="h-14 bg-white/5 border-white/10 text-white placeholder:text-slate-400 focus-visible:ring-indigo-500 focus-visible:ring-offset-[#0B1121] rounded-full px-6 flex-1 text-base transition-colors hover:bg-white/10"
                                         />
                                         <Button
                                             type="submit"
                                             size="lg"
                                             disabled={submitting}
-                                            className="h-14 rounded-full px-8 bg-indigo-600 hover:bg-indigo-500 text-white font-medium group disabled:opacity-50"
+                                            className="h-14 rounded-full px-8 bg-indigo-600 hover:bg-indigo-500 text-white font-medium group disabled:opacity-50 transition-all shadow-lg hover:shadow-xl hover:shadow-indigo-500/25"
                                         >
                                             {submitting ? "Sending..." : "Get early access"}
                                             {!submitting && (
@@ -120,7 +120,7 @@ export function CTA() {
                                     </div>
                                     <select
                                         name="useCase"
-                                        className="w-full h-12 rounded-full px-6 bg-white/5 border border-white/10 text-slate-400 text-sm appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-slate-900"
+                                        className="w-full h-14 rounded-full px-6 bg-white/5 border border-white/10 text-slate-300 text-sm appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-[#0B1121] transition-colors hover:bg-white/10"
                                         defaultValue=""
                                     >
                                         <option value="" disabled>What brings you here? (optional)</option>

@@ -5,18 +5,18 @@ import { motion } from "framer-motion";
 const steps = [
     {
         number: "1",
-        title: "Fill out a form like normal",
-        description: "It's simple. No setup needed. You fill a form like usual, and AuFill quietly remembers your answers."
+        title: "Fill one application like normal",
+        description: "Start with a job, scholarship, accelerator, or grant application. OneEntry learns and remembers the answers you already type."
     },
     {
         number: "2",
-        title: "AuFill organizes, learns, and remembers",
-        description: "It organizes them into your profile. Work history, project details, school info and personal details stay ready for next time."
+        title: "OneEntry saves and organizes your answers",
+        description: "Your work history, school info, essays, personal details, and other application answers stay ready for the next form."
     },
     {
         number: "3",
-        title: "Reuse them on the next form",
-        description: "When a new form asks similar questions, AuFill suggests the right answers for you to review."
+        title: "It adapts them to the next application",
+        description: "When a new form asks for similar information in a different way, OneEntry matches the right answers for you to review before submitting."
     }
 ];
 
@@ -29,7 +29,7 @@ export function HowItWorks() {
                         How it works
                     </h2>
                     <p className="text-lg text-slate-600">
-                        Three steps. Zero effort.
+                        Three simple steps for repetitive applications.
                     </p>
                 </div>
 
@@ -47,7 +47,7 @@ export function HowItWorks() {
                                 transition={{ duration: 0.5, delay: idx * 0.2 }}
                                 className="text-center group"
                             >
-                                <div className="w-20 h-20 mx-auto rounded-full bg-white border-4 border-slate-50 shadow-xl shadow-indigo-900/5 flex items-center justify-center mb-8 relative">
+                                <div className="w-20 h-20 mx-auto rounded-full bg-white ring-8 ring-slate-50 shadow-xl shadow-slate-200/50 flex items-center justify-center mb-8 relative group-hover:scale-110 transition-transform duration-300">
                                     <div className="absolute inset-0 rounded-full bg-gradient-to-br from-indigo-600 to-violet-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                                     <span className="text-2xl font-bold text-indigo-600 group-hover:text-white relative z-10 transition-colors duration-300">
                                         {step.number}

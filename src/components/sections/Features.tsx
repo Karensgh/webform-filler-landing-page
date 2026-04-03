@@ -12,7 +12,7 @@ const features = [
     {
         icon: <SearchCode className="w-6 h-6 text-indigo-600" />,
         title: "Works even when forms look different",
-        description: "AuFill reads forms the way you do. Different labels, different layouts — same smart answers."
+        description: "OneEntry reads forms the way you do. Different labels, different layouts — same smart answers."
     },
     {
         icon: <ShieldCheck className="w-6 h-6 text-indigo-600" />,

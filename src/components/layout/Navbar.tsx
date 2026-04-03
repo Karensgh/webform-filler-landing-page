@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 
@@ -19,16 +20,19 @@ export function Navbar() {
     return (
         <header
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-                    ? "bg-white/85 backdrop-blur-xl border-b border-slate-200/60 py-3 shadow-sm"
-                    : "bg-transparent py-5"
+                ? "bg-white/85 backdrop-blur-xl border-b border-slate-200/60 py-3 shadow-sm"
+                : "bg-transparent py-5"
                 }`}
         >
             <div className="container flex items-center justify-between">
-                <Link href="/" className="flex items-center gap-2 group">
-                    <div className="w-8 h-8 rounded-md bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center shadow-lg shadow-indigo-500/20 group-hover:shadow-indigo-500/40 transition-shadow">
-                        <span className="text-white font-bold text-lg leading-none">A</span>
-                    </div>
-                    <span className="font-display font-bold text-xl text-slate-900 tracking-tight">AuFill</span>
+                <Link href="/" className="flex items-center group">
+                    <Image
+                        src="/logo.svg"
+                        alt="OneEntry"
+                        width={520}
+                        height={120}
+                        className="h-9 w-auto hover:opacity-90 transition-opacity"
+                    />
                 </Link>
 
                 <div className="hidden md:flex items-center gap-6">
