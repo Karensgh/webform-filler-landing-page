@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const useCases = [
     {
         title: "Job seekers",
-        description: "Applying to 300 jobs this week? Your time shouldn't be spent on copy-pasting your work history into all job websites. Let AuFill handle it.",
+        description: "Applying to 30 jobs this week? Stop copy-pasting your work history into Workday, Lever, and Greenhouse. Let AuFill handle it.",
         gradient: "from-blue-100 to-indigo-100"
     },
     {
@@ -15,33 +15,22 @@ const useCases = [
     },
     {
         title: "Founders",
-        description: "Accelerator applications, grant portals, investor forms. Your team bios and traction numbers shouldn't need to be retyped every time.",
+        description: "Accelerator applications, grant portals, investor forms. Your team bios and traction numbers shouldn\u0027t need to be retyped every time.",
         gradient: "from-emerald-100 to-teal-100"
     }
 ];
 
-export function Problem() {
+export function UseCases() {
     return (
-        <section id="problem" className="py-24 bg-slate-50 relative">
+        <section id="use-cases" className="py-24 bg-white">
             <div className="container">
                 <div className="max-w-3xl mx-auto text-center mb-16">
-                    <motion.h2
-                        initial={{ opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="text-3xl md:text-4xl font-bold text-slate-900 mb-4"
-                    >
-                        The internet keeps asking for the same information.
-                    </motion.h2>
-                    {/* <motion.p
-                        initial={{ opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.1 }}
-                        className="text-lg text-slate-600"
-                    >
-                        It&apos;s a straightforward problem but has existed for so many years. You upload, re-type, copy, paste, and repeat.
-                    </motion.p> */}
+                    <h2 className="text-3xl md:text-5xl font-bold font-display text-slate-900 mb-6 tracking-tight">
+                        Built for you
+                    </h2>
+                    <p className="text-lg text-slate-600">
+                        If you&apos;ve ever thought &quot;I&apos;ve already typed this somewhere,&quot; AuFill is for you.
+                    </p>
                 </div>
 
                 <div className="max-w-2xl mx-auto flex flex-col gap-6">

@@ -3,7 +3,6 @@ import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { Problem } from "@/components/sections/Problem";
 import { HowItWorks } from "@/components/sections/HowItWorks";
-import { Features } from "@/components/sections/Features";
 import { CTA } from "@/components/sections/CTA";
 
 export default function Home() {
@@ -14,7 +13,6 @@ export default function Home() {
         <Hero />
         <Problem />
         <HowItWorks />
-        <Features />
         <CTA />
       </main>
       <Footer />

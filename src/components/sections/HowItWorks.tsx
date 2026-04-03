@@ -6,17 +6,17 @@ const steps = [
     {
         number: "1",
         title: "Fill out a form like normal",
-        description: "No setup needed. The first time you fill a form, AuFill quietly remembers your answers."
+        description: "It's simple. No setup needed. You fill a form like usual, and AuFill quietly remembers your answers."
     },
     {
         number: "2",
-        title: "AuFill learns what you mean",
-        description: "It understands that \u2018Work History\u2019 and \u2018Employment Background\u2019 are asking the same thing."
+        title: "AuFill organizes, learns, and remembers",
+        description: "It organizes them into your profile. Work history, project details, school info and personal details stay ready for next time."
     },
     {
         number: "3",
-        title: "One click, done",
-        description: "Next time you hit a form, click once. Every field fills in automatically."
+        title: "Reuse them on the next form",
+        description: "When a new form asks similar questions, AuFill suggests the right answers for you to review."
     }
 ];
 

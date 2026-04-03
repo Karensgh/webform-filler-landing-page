@@ -31,16 +31,14 @@ export function Navbar() {
                     <span className="font-display font-bold text-xl text-slate-900 tracking-tight">AuFill</span>
                 </Link>
 
-                <nav className="hidden md:flex items-center gap-8">
-                    <Link href="#how-it-works" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">How it works</Link>
-                    <Link href="#features" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Features</Link>
+                <div className="hidden md:flex items-center gap-6">
                     <Link href="#problem" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Use Cases</Link>
-                </nav>
-
-                <div className="hidden md:flex items-center gap-4">
-                    <Button className="rounded-full bg-slate-900 hover:bg-slate-800 text-white shadow-md shadow-slate-900/10">
-                        Get early access
-                    </Button>
+                    <Link href="#how-it-works" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">How it works</Link>
+                    <a href="#waitlist">
+                        <Button className="rounded-full bg-slate-900 hover:bg-slate-800 text-white shadow-md shadow-slate-900/10">
+                            Get early access
+                        </Button>
+                    </a>
                 </div>
 
                 <button className="md:hidden text-slate-900">

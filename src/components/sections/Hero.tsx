@@ -32,18 +32,18 @@ export function Hero() {
                         A browser extension that remembers what you&apos;ve typed on forms and intelligently fills them in next time — on any website.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                        <Button size="lg" className="rounded-full h-14 px-8 text-base bg-indigo-600 hover:bg-indigo-700 text-white shadow-lg shadow-indigo-600/20 group">
-                            Get early access
-                            <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                        </Button>
-                        <Button size="lg" variant="outline" className="rounded-full h-14 px-8 text-base border-slate-200 hover:bg-slate-50 text-slate-700">
-                            See how it works
-                        </Button>
+                        <a href="#waitlist">
+                            <Button size="lg" className="rounded-full h-14 px-8 text-base bg-indigo-600 hover:bg-indigo-700 text-white shadow-lg shadow-indigo-600/20 group">
+                                Get early access - It's free!
+                                <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                            </Button>
+                        </a>
+                        <a href="#how-it-works">
+                            <Button size="lg" variant="outline" className="rounded-full h-14 px-8 text-base border-slate-200 hover:bg-slate-50 text-slate-700">
+                                See how it works
+                            </Button>
+                        </a>
                     </div>
-
-                    <p className="text-sm text-slate-500">
-                        Looking for our first 100 beta users — it&apos;s free!
-                    </p>
                 </motion.div>
             </div>
         </section>
