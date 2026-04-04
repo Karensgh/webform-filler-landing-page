@@ -29,9 +29,9 @@ export function Navbar() {
                 <Link href="/" className="flex items-center group">
                     <Image
                         src="/logo.svg"
-                        alt="OneEntry"
-                        width={520}
-                        height={120}
+                        alt="Learn & Fill"
+                        width={480}
+                        height={80}
                         className="h-9 w-auto hover:opacity-90 transition-opacity"
                     />
                 </Link>

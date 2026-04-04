@@ -13,7 +13,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "OneEntry - Stop retyping your applications.",
+  title: "Learn & Fill - Stop retyping your applications.",
   description: "Enter your information once, then reuse it across job, scholarship, accelerator, and grant applications.",
 };
 

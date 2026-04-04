@@ -10,9 +10,9 @@ export function Footer() {
                         <Link href="/" className="flex items-center mb-4 inline-flex">
                             <Image
                                 src="/logo.svg"
-                                alt="OneEntry"
-                                width={520}
-                                height={120}
+                                alt="Learn & Fill"
+                                width={480}
+                                height={80}
                                 className="h-10 w-auto"
                             />
                         </Link>

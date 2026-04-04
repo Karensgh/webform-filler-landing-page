@@ -1,29 +1,27 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { BrainCircuit, FileText, SearchCode, ShieldCheck } from "lucide-react";
+import { Brain, Users, Zap } from "lucide-react";
 
 const features = [
     {
-        icon: <BrainCircuit className="w-6 h-6 text-indigo-600" />,
-        title: "Remembers everything you\u2019ve entered",
-        description: "Your work history, education, essays, and personal details — all saved and organized automatically."
+        icon: <Brain className="w-6 h-6 text-indigo-600" />,
+        title: "More than basic autofill",
+        description:
+            'Chrome autofill handles basics. Learn &amp; Fill helps with work history, school details, essays, and repeated application answers because it knows you.',
     },
     {
-        icon: <SearchCode className="w-6 h-6 text-indigo-600" />,
-        title: "Works even when forms look different",
-        description: "OneEntry reads forms the way you do. Different labels, different layouts — same smart answers."
+        icon: <Users className="w-6 h-6 text-indigo-600" />,
+        title: "Multiple profiles for different contexts",
+        description:
+            "Create separate profiles for job searches, school applications, grants, or personal admin so the right information is always ready when you need it.",
     },
     {
-        icon: <ShieldCheck className="w-6 h-6 text-indigo-600" />,
-        title: "You always review before submitting",
-        description: "Nothing gets submitted without your say-so. Review every field before you hit send."
+        icon: <Zap className="w-6 h-6 text-indigo-600" />,
+        title: "Learns as you go",
+        description:
+            "Two simple modes: Learn builds your profile as you fill forms the normal way. Fill instantly completes new forms using everything it knows about you. The more you use it, the more accurate and complete it becomes.",
     },
-    {
-        icon: <FileText className="w-6 h-6 text-indigo-600" />,
-        title: "Works on web forms and PDFs",
-        description: "Job portals, scholarship sites, government forms, applications — all supported."
-    }
 ];
 
 export function Features() {
@@ -32,28 +30,22 @@ export function Features() {
             <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-indigo-100/40 via-transparent to-transparent pointer-events-none" />
 
             <div className="container relative z-10">
-                <div className="mb-16 md:flex items-end justify-between gap-8">
-                    <div className="max-w-2xl">
-                        <motion.h2
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            className="text-4xl md:text-5xl font-bold font-display text-slate-900 mb-6 tracking-tight leading-tight"
-                        >
-                            Everything you need<br />to apply faster.
-                        </motion.h2>
-                    </div>
-                    <motion.p
-                        initial={{ opacity: 0, x: 20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        className="text-lg text-slate-600 max-w-md pb-2"
-                    >
-                        More than just basic browser autofill. Contextual semantic intelligence natively in your browser.
-                    </motion.p>
-                </div>
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5 }}
+                    className="text-center mb-16"
+                >
+                    <h2 className="text-4xl md:text-5xl font-bold font-display tracking-tight text-slate-900 mb-4">
+                        More than autofill.
+                    </h2>
+                    <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+                        Chrome fills in your name. Learn &amp; Fill learns and fills in your story.
+                    </p>
+                </motion.div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                     {features.map((feature, idx) => (
                         <motion.div
                             key={idx}
@@ -66,8 +58,8 @@ export function Features() {
                             <div className="w-12 h-12 rounded-lg bg-indigo-50 flex items-center justify-center mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-300">
                                 <div className="group-hover:text-white transition-colors">{feature.icon}</div>
                             </div>
-                            <h4 className="text-xl font-bold text-slate-900 mb-3">{feature.title}</h4>
-                            <p className="text-slate-600 leading-relaxed">{feature.description}</p>
+                            <h3 className="text-xl font-bold text-slate-900 mb-3">{feature.title}</h3>
+                            <p className="text-slate-600 text-sm leading-relaxed">{feature.description}</p>
                         </motion.div>
                     ))}
                 </div>

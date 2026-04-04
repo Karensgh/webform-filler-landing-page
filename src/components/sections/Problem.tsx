@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const useCases = [
     {
         title: "Job and internship applications",
-        description: "Upload your resume, then re-enter your work history, education, links, and personal details across every application portal. OneEntry keeps those answers ready.",
+        description: "Upload your resume, then re-enter your work history, education, links, and personal details across every application portal. Learn &amp; Fill keeps those answers ready.",
         gradient: "from-blue-100 to-indigo-100"
     },
     {
@@ -45,7 +45,7 @@ export function Problem() {
                         transition={{ delay: 0.1 }}
                         className="text-lg text-slate-600"
                     >
-                        It's simple. When every portal asks for the same information in a different format, OneEntry helps you reuse what you&apos;ve already written.
+                        It's simple. When every portal asks for the same information in a different format, Learn &amp; Fill helps you reuse what you&apos;ve already written.
                     </motion.p>
                 </div>
 

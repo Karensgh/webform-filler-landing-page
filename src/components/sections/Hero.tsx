@@ -20,13 +20,13 @@ export function Hero() {
                     transition={{ duration: 0.5, ease: "easeOut" }}
                 >
                     <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-display tracking-tight text-slate-900 mb-6 leading-[1.1]">
-                        Stop retyping your{" "}
+                        Your life story, ready for{" "}
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500">
-                            applications.
+                            any form.
                         </span>
                     </h1>
                     <p className="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-                        Enter your information once, then reuse it across job, scholarship, accelerator, and grant applications.
+                        Stop retyping the same answers. Learn &amp; Fill learns who you are and fills any form for you — job apps, scholarships, grants, and more.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                         <a href="#waitlist">

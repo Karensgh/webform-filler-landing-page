@@ -1,45 +1,32 @@
-<svg width="520" height="120" viewBox="0 0 520 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="480" height="80" viewBox="0 0 480 80" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#4F46E5" /> <!-- indigo-600 -->
-      <stop offset="100%" stop-color="#7C3AED" /> <!-- violet-600 -->
-    </linearGradient>
-    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="fillGradient" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#4F46E5" />
-      <stop offset="100%" stop-color="#3B82F6" /> <!-- blue-500 -->
+      <stop offset="100%" stop-color="#7C3AED" />
     </linearGradient>
     <style>
-      .textOne {
+      .textLearn {
         font-family: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
         font-weight: 800;
-        font-size: 72px;
-        fill: #0F172A; /* slate-900 */
+        font-size: 62px;
+        fill: #4F46E5;
         letter-spacing: -2px;
       }
-      .textEntry {
+      .textAmp {
+        font-family: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
+        font-weight: 300;
+        font-size: 62px;
+        fill: #0F172A;
+        letter-spacing: -2px;
+      }
+      .textFill {
         font-family: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
         font-weight: 800;
-        font-size: 72px;
-        fill: url(#textGradient);
+        font-size: 62px;
+        fill: url(#fillGradient);
         letter-spacing: -2px;
       }
     </style>
   </defs>
-
-  <!-- High-quality perfect square with rounded corners for the Icon -->
-  <g transform="translate(10, 10)">
-    <rect x="0" y="0" width="100" height="100" rx="24" fill="url(#iconGradient)" />
-    
-    <!-- Stylized "1" that matches the font weight -->
-    <path d="M 38 28 L 38 72" stroke="white" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M 24 38 L 38 28" stroke="white" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
-    
-    <!-- Form blanks mimicking a document next to the 1 -->
-    <rect x="58" y="32" width="22" height="10" rx="5" fill="white" />
-    <rect x="58" y="52" width="22" height="10" rx="5" fill="white" />
-    <rect x="58" y="72" width="14" height="10" rx="5" fill="white" />
-  </g>
-
-  <!-- Perfectly aligned typography -->
-  <text x="135" y="86" class="textOne">One<tspan class="textEntry">Entry</tspan></text>
+  <text x="0" y="60" class="textLearn">Learn <tspan class="textAmp">&amp; </tspan><tspan class="textFill">Fill</tspan></text>
 </svg>

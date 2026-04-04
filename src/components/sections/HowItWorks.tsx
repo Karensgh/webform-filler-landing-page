@@ -6,17 +6,17 @@ const steps = [
     {
         number: "1",
         title: "Fill one application like normal",
-        description: "Start with a job, scholarship, accelerator, or grant application. OneEntry learns and remembers the answers you already type."
+        description: "Start with a job, scholarship, accelerator, or grant application. Learn &amp; Fill learns and remembers the answers you already type."
     },
     {
         number: "2",
-        title: "OneEntry saves and organizes your answers",
+        title: "Learn &amp; Fill saves and organizes your answers",
         description: "Your work history, school info, essays, personal details, and other application answers stay ready for the next form."
     },
     {
         number: "3",
         title: "It adapts them to the next application",
-        description: "When a new form asks for similar information in a different way, OneEntry matches the right answers for you to review before submitting."
+        description: "When a new form asks for similar information in a different way, Learn &amp; Fill matches the right answers for you to review before submitting."
     }
 ];
 
