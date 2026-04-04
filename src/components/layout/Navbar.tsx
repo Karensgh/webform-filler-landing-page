@@ -37,8 +37,9 @@ export function Navbar() {
                 </Link>
 
                 <div className="hidden md:flex items-center gap-6">
-                    <Link href="#problem" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Use Cases</Link>
+                    <Link href="#features" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Features</Link>
                     <Link href="#how-it-works" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">How it works</Link>
+                    <Link href="#problem" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Use Cases</Link>
                     <a href="#waitlist">
                         <Button className="rounded-full bg-slate-900 hover:bg-slate-800 text-white shadow-md shadow-slate-900/10">
                             Get early access
@@ -53,8 +54,9 @@ export function Navbar() {
 
             {isOpen && (
                 <div className="md:hidden bg-white border-t border-slate-200/60 px-6 py-4 flex flex-col gap-4">
-                    <Link href="#problem" onClick={() => setIsOpen(false)} className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Use Cases</Link>
+                    <Link href="#features" onClick={() => setIsOpen(false)} className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Features</Link>
                     <Link href="#how-it-works" onClick={() => setIsOpen(false)} className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">How it works</Link>
+                    <Link href="#problem" onClick={() => setIsOpen(false)} className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Use Cases</Link>
                     <a href="#waitlist" onClick={() => setIsOpen(false)}>
                         <Button className="w-full rounded-full bg-slate-900 hover:bg-slate-800 text-white shadow-md shadow-slate-900/10">
                             Get early access

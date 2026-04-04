@@ -1,11 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { LearnAndFill } from "@/components/ui/LearnAndFill";
 
 const useCases = [
     {
         title: "Job seekers",
-        description: "Applying to 30 jobs this week? Stop copy-pasting your work history into Workday, Lever, and Greenhouse. Let Learn &amp; Fill handle it.",
+        description: "Applying to 30 jobs this week? Stop copy-pasting your work history into Workday, Lever, and Greenhouse. Let Learn & Fill handle it.",
         gradient: "from-blue-100 to-indigo-100"
     },
     {
@@ -29,7 +30,7 @@ export function UseCases() {
                         Built for you
                     </h2>
                     <p className="text-lg text-slate-600">
-                        If you&apos;ve ever thought &quot;I&apos;ve already typed this somewhere,&quot; Learn &amp; Fill is for you.
+                        If you&apos;ve ever thought &quot;I&apos;ve already typed this somewhere,&quot; <LearnAndFill /> is for you.
                     </p>
                 </div>
 

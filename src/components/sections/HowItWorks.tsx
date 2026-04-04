@@ -33,7 +33,7 @@ export function HowItWorks() {
                         How it works
                     </h2>
                     <p className="text-lg text-slate-600">
-                        It&apos;s simple.
+                        It learns and fills.
                     </p>
                 </div>
 

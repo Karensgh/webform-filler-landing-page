@@ -2,13 +2,14 @@
 
 import { motion } from "framer-motion";
 import { Brain, Users, Zap } from "lucide-react";
+import { LearnAndFill } from "@/components/ui/LearnAndFill";
 
 const features = [
     {
         icon: <Brain className="w-6 h-6 text-indigo-600" />,
         title: "More than basic autofill",
         description:
-            'Chrome autofill handles basics. Learn &amp; Fill helps with work history, school details, essays, and repeated application answers because it knows you.',
+            'Chrome autofill handles basics. Learn & Fill helps with work history, insurance quotes, rental applications, and repeated application answers because it knows you.',
     },
     {
         icon: <Users className="w-6 h-6 text-indigo-600" />,
@@ -19,8 +20,12 @@ const features = [
     {
         icon: <Zap className="w-6 h-6 text-indigo-600" />,
         title: "Learns as you go",
-        description:
-            "Two simple modes: Learn builds your profile as you fill forms the normal way. Fill instantly completes new forms using everything it knows about you. The more you use it, the more accurate and complete it becomes.",
+        description: null,
+        richDescription: (
+            <>
+                Two simple modes: <span className="font-semibold text-indigo-600">Learn</span> builds your profile as you fill forms the normal way. <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600">Fill</span> instantly completes new forms using everything it knows about you. The more you use it, the more accurate and complete it becomes.
+            </>
+        ),
     },
 ];
 
@@ -38,10 +43,10 @@ export function Features() {
                     className="text-center mb-16"
                 >
                     <h2 className="text-4xl md:text-5xl font-bold font-display tracking-tight text-slate-900 mb-4">
-                        More than autofill.
+                        More than autofill
                     </h2>
                     <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-                        Chrome fills in your name. Learn &amp; Fill learns and fills in your story.
+                        Chrome fills in your name. <LearnAndFill /> learns and fills in your story.
                     </p>
                 </motion.div>
 
@@ -59,7 +64,7 @@ export function Features() {
                                 <div className="group-hover:text-white transition-colors">{feature.icon}</div>
                             </div>
                             <h3 className="text-xl font-bold text-slate-900 mb-3">{feature.title}</h3>
-                            <p className="text-slate-600 text-sm leading-relaxed">{feature.description}</p>
+                            <p className="text-slate-600 text-sm leading-relaxed">{feature.richDescription || feature.description}</p>
                         </motion.div>
                     ))}
                 </div>

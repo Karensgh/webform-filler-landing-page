@@ -1,38 +1,45 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { LearnAndFill } from "@/components/ui/LearnAndFill";
 
 const useCases = [
-    {
-        title: "Job seekers",
-        description: "Applying to 100+ roles a week? Stop re-entering your work history into Workday, Lever, and Greenhouse every time.",
-        gradient: "from-blue-100 to-indigo-100"
-    },
-    {
-        title: "Students & scholarship applicants",
-        description: "GPA, extracurriculars, essays, recommendation details — reuse them across every portal instead of starting from scratch.",
-        gradient: "from-fuchsia-100 to-purple-100"
-    },
-    {
-        title: "Founders & grant applicants",
-        description: "Keep your team bios, traction numbers, and company story ready for every accelerator and grant form.",
-        gradient: "from-emerald-100 to-teal-100"
-    },
-    {
-        title: "Admin & operations staff",
-        description: "Onboarding clients, filing paperwork, submitting vendor forms — fill the same templates for different people without retyping from scratch.",
-        gradient: "from-amber-100 to-orange-100"
-    },
-    {
-        title: "Anyone doing life admin",
-        description: "Insurance quotes, rental applications, loan pre-approvals, government forms — your personal details shouldn't need to be retyped every time.",
-        gradient: "from-rose-100 to-pink-100"
-    },
-    {
-        title: "Your personal information, always up to date",
-        description: "New job title? Moved to a new city? Updated your certifications? Your info is always changing — Learn & Fill grows with you so you never fill out stale details again.",
-        gradient: "from-cyan-100 to-sky-100"
-    }
+  {
+    title: "Job seekers",
+    description:
+      "Stop re-entering your work history, education, and repeated answers into Workday, Lever, and Greenhouse every time you apply.",
+    gradient: "from-blue-100 to-indigo-100"
+  },
+  {
+    title: "Students & scholarship applicants",
+    description:
+      "Reuse your GPA, extracurriculars, essays, and recommendation details across every application instead of starting from scratch.",
+    gradient: "from-fuchsia-100 to-purple-100"
+  },
+  {
+    title: "Founders & grant applicants",
+    description:
+      "Keep your team bios, traction metrics, and company story ready for every accelerator, grant, and funding application.",
+    gradient: "from-emerald-100 to-teal-100"
+  },
+  {
+    title: "Admin & operations teams",
+    description:
+      "Onboard clients, submit vendor forms, and handle repetitive paperwork without retyping the same information over and over.",
+    gradient: "from-amber-100 to-orange-100"
+  },
+  {
+    title: "Personal applications",
+    description:
+      "From insurance quotes to rental applications and loan forms, reuse your information instead of filling in the same details every time.",
+    gradient: "from-rose-100 to-pink-100"
+  },
+  {
+    title: "Always up to date",
+    description:
+      "Changed jobs, moved cities, or updated your certifications? Learn & Fill keeps your profile current so future forms use your latest information.",
+    gradient: "from-cyan-100 to-sky-100"
+  }
 ];
 
 export function Problem() {
@@ -55,7 +62,7 @@ export function Problem() {
                         transition={{ delay: 0.1 }}
                         className="text-lg text-slate-600"
                     >
-                        Whether it's for yourself or for others — if you've typed the same answers twice, Learn & Fill is for you.
+                        Whether it&apos;s for yourself or for others — if you&apos;ve typed the same answers twice, <LearnAndFill /> is for you.
                     </motion.p>
                 </div>
 
