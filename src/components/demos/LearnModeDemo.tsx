@@ -143,14 +143,13 @@ export function LearnModeDemo() {
                             phase === "hover-icon"
                                 ? { scale: 1.15 }
                                 : phase === "saved"
-                                ? { scale: [1, 1.1, 1] }
-                                : { scale: 1 }
+                                    ? { scale: [1, 1.1, 1] }
+                                    : { scale: 1 }
                         }
-                        className={`w-10 h-10 rounded-full flex items-center justify-center text-white text-xs font-bold shadow-lg cursor-pointer transition-colors duration-300 ${
-                            phase === "saved"
+                        className={`w-10 h-10 rounded-full flex items-center justify-center text-white text-xs font-bold shadow-lg cursor-pointer transition-colors duration-300 ${phase === "saved"
                                 ? "bg-emerald-500 shadow-emerald-500/30"
                                 : "bg-gradient-to-br from-indigo-600 to-violet-600 shadow-indigo-500/30"
-                        }`}
+                            }`}
                     >
                         {phase === "saved" ? (
                             <CheckCircle2 className="w-4 h-4" />
@@ -170,11 +169,10 @@ export function LearnModeDemo() {
                                 className="absolute top-12 right-0 bg-white rounded-xl border border-slate-200 shadow-xl p-2 w-52"
                             >
                                 <button
-                                    className={`w-full flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-all ${
-                                        phase === "click-learn" || showProfiles
+                                    className={`w-full flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-all ${phase === "click-learn" || showProfiles
                                             ? "bg-indigo-50 text-indigo-700"
                                             : "text-slate-700 hover:bg-slate-50"
-                                    }`}
+                                        }`}
                                 >
                                     <BookOpen className="w-4 h-4" />
                                     Learn
@@ -197,11 +195,10 @@ export function LearnModeDemo() {
                                                 {profiles.map((profile, i) => (
                                                     <div
                                                         key={profile.name}
-                                                        className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs transition-all ${
-                                                            selectedProfile === i
+                                                        className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs transition-all ${selectedProfile === i
                                                                 ? "bg-indigo-600 text-white font-medium"
                                                                 : "text-slate-600"
-                                                        }`}
+                                                            }`}
                                                     >
                                                         <div className={`w-2 h-2 rounded-full ${selectedProfile === i ? "bg-white" : "bg-indigo-400"}`} />
                                                         {profile.name}
@@ -230,13 +227,12 @@ export function LearnModeDemo() {
                                 {field.label}
                             </label>
                             <div
-                                className={`relative rounded-lg border px-3 py-2 text-sm transition-all duration-300 ${
-                                    currentField === i && phase === "typing"
+                                className={`relative rounded-lg border px-3 py-2 text-sm transition-all duration-300 ${currentField === i && phase === "typing"
                                         ? "border-indigo-400 ring-2 ring-indigo-100"
                                         : phase === "scanning" && scanningField === i
-                                        ? "border-indigo-400 ring-2 ring-indigo-100 bg-indigo-50/30"
-                                        : "border-slate-200"
-                                } ${field.multiline ? "min-h-[60px]" : "h-9"}`}
+                                            ? "border-indigo-400 ring-2 ring-indigo-100 bg-indigo-50/30"
+                                            : "border-slate-200"
+                                    } ${field.multiline ? "min-h-[60px]" : "h-9"}`}
                             >
                                 <span className="text-slate-800 text-xs">{typedFields[i]}</span>
                                 {currentField === i && phase === "typing" && typedFields[i].length < field.value.length && (
@@ -273,7 +269,7 @@ export function LearnModeDemo() {
                         className="mt-4 flex items-center justify-center gap-2 text-sm text-emerald-600 font-medium"
                     >
                         <CheckCircle2 className="w-4 h-4" />
-                        {formFields.length} answers saved to &quot;Software Engineer&quot; profile
+                        {formFields.length}{" "}answers saved to &quot;Software Engineer&quot; profile
                     </motion.div>
                 )}
             </AnimatePresence>

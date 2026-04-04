@@ -37,13 +37,16 @@ export function HowItWorks() {
                     </p>
                 </div>
 
-                <div className="max-w-6xl mx-auto">
+                <div className="max-w-6xl mx-auto relative">
+
+
+
                     {/* Step 1: Compact banner */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="bg-slate-50 border border-slate-200/60 rounded-2xl px-6 py-5 mb-10 flex items-center gap-4 shadow-sm max-w-lg mx-auto"
+                        className="relative z-10 bg-white border border-slate-200/60 rounded-2xl px-6 py-5 flex items-center gap-4 shadow-sm max-w-lg mx-auto"
                     >
                         <div className="w-10 h-10 shrink-0 rounded-xl bg-gradient-to-br from-indigo-600 to-violet-600 flex items-center justify-center shadow-md shadow-indigo-500/20">
                             <span className="text-lg font-bold text-white">1</span>
@@ -54,8 +57,61 @@ export function HowItWorks() {
                         </div>
                     </motion.div>
 
-                    {/* Step 2 & 3: Side by side, equal height */}
-                    <div className="grid md:grid-cols-2 gap-8">
+                    {/* Elegant Curved CSS Connector */}
+                    <div className="hidden md:flex flex-col w-full relative z-0 -mt-3 mb-10 pointer-events-none" aria-hidden="true">
+                        {/* Center Trunk */}
+                        <div className="flex justify-center">
+                            <motion.div
+                                initial={{ height: 0 }}
+                                whileInView={{ height: "2.5rem" }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.4, ease: "easeOut" }}
+                                className="w-[3px] bg-gradient-to-b from-indigo-200 to-indigo-300 rounded-full"
+                            />
+                        </div>
+                        {/* Curved Branches */}
+                        <div className="grid grid-cols-2 w-full">
+                            {/* Left Branch */}
+                            <div className="flex justify-end pr-[-1px]">
+                                <motion.div
+                                    initial={{ width: 0 }}
+                                    whileInView={{ width: "50%" }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.5, delay: 0.4, ease: "easeInOut" }}
+                                    className="h-16 border-t-[3px] border-l-[3px] border-indigo-300 rounded-tl-[2rem] origin-right relative"
+                                >
+                                    <motion.div
+                                        initial={{ opacity: 0, scale: 0 }}
+                                        whileInView={{ opacity: 1, scale: 1 }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.3, delay: 0.9 }}
+                                        className="absolute -bottom-1 -left-[4.5px] w-2 h-2 rounded-full bg-indigo-600 shadow-[0_0_10px_rgba(79,70,229,0.8)] ring-4 ring-white"
+                                    />
+                                </motion.div>
+                            </div>
+                            {/* Right Branch */}
+                            <div className="flex justify-start pl-[-1px]">
+                                <motion.div
+                                    initial={{ width: 0 }}
+                                    whileInView={{ width: "50%" }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.5, delay: 0.4, ease: "easeInOut" }}
+                                    className="h-16 border-t-[3px] border-r-[3px] border-indigo-300 rounded-tr-[2rem] origin-left relative"
+                                >
+                                    <motion.div
+                                        initial={{ opacity: 0, scale: 0 }}
+                                        whileInView={{ opacity: 1, scale: 1 }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.3, delay: 0.9 }}
+                                        className="absolute -bottom-1 -right-[4.5px] w-2 h-2 rounded-full bg-violet-600 shadow-[0_0_10px_rgba(139,92,246,0.8)] ring-4 ring-white"
+                                    />
+                                </motion.div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Step 2 & 3: Side by side */}
+                    <div className="relative z-10 grid md:grid-cols-2 gap-8">
                         {[steps[1], steps[2]].map((step, idx) => (
                             <motion.div
                                 key={step.number}

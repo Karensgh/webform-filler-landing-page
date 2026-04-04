@@ -115,14 +115,13 @@ export function FillModeDemo() {
                             phase === "hover-icon"
                                 ? { scale: 1.15 }
                                 : phase === "done"
-                                ? { scale: [1, 1.1, 1] }
-                                : { scale: 1 }
+                                    ? { scale: [1, 1.1, 1] }
+                                    : { scale: 1 }
                         }
-                        className={`w-10 h-10 rounded-full flex items-center justify-center text-white text-xs font-bold shadow-lg cursor-pointer transition-colors duration-300 ${
-                            phase === "done"
+                        className={`w-10 h-10 rounded-full flex items-center justify-center text-white text-xs font-bold shadow-lg cursor-pointer transition-colors duration-300 ${phase === "done"
                                 ? "bg-emerald-500 shadow-emerald-500/30"
                                 : "bg-gradient-to-br from-indigo-600 to-violet-600 shadow-indigo-500/30"
-                        }`}
+                            }`}
                     >
                         {phase === "done" ? (
                             <CheckCircle2 className="w-4 h-4" />
@@ -146,11 +145,10 @@ export function FillModeDemo() {
                                     Learn
                                 </button>
                                 <button
-                                    className={`w-full flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-all ${
-                                        phase === "click-fill" || showProfiles
+                                    className={`w-full flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-all ${phase === "click-fill" || showProfiles
                                             ? "bg-indigo-50 text-indigo-700"
                                             : "text-slate-700 hover:bg-slate-50"
-                                    }`}
+                                        }`}
                                 >
                                     <Wand2 className="w-4 h-4" />
                                     Fill
@@ -169,11 +167,10 @@ export function FillModeDemo() {
                                                 {profiles.map((profile, i) => (
                                                     <div
                                                         key={profile.name}
-                                                        className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs transition-all ${
-                                                            selectedProfile === i
+                                                        className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs transition-all ${selectedProfile === i
                                                                 ? "bg-indigo-600 text-white font-medium"
                                                                 : "text-slate-600"
-                                                        }`}
+                                                            }`}
                                                     >
                                                         <div className={`w-2 h-2 rounded-full ${selectedProfile === i ? "bg-white" : "bg-indigo-400"}`} />
                                                         {profile.name}
@@ -198,11 +195,10 @@ export function FillModeDemo() {
                                 {field.label}
                             </label>
                             <div
-                                className={`relative rounded-lg border px-3 py-2 text-sm transition-all duration-400 ${
-                                    filledFields.includes(i)
+                                className={`relative rounded-lg border px-3 py-2 text-sm transition-all duration-400 ${filledFields.includes(i)
                                         ? "border-emerald-400 ring-2 ring-emerald-100 bg-emerald-50/20"
                                         : "border-slate-200"
-                                } ${field.multiline ? "min-h-[60px]" : "h-9"}`}
+                                    } ${field.multiline ? "min-h-[60px]" : "h-9"}`}
                             >
                                 <AnimatePresence>
                                     {filledFields.includes(i) ? (
@@ -247,7 +243,7 @@ export function FillModeDemo() {
                         className="mt-4 flex items-center justify-center gap-2 text-sm text-emerald-600 font-medium"
                     >
                         <CheckCircle2 className="w-4 h-4" />
-                        {formFields.length} fields filled from &quot;AI Engineer&quot; profile
+                        {formFields.length}{" "}fields filled from &quot;AI Engineer&quot; profile
                     </motion.div>
                 )}
             </AnimatePresence>
