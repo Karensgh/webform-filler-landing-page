@@ -1,23 +1,27 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { LearnModeDemo } from "@/components/demos/LearnModeDemo";
+import { FillModeDemo } from "@/components/demos/FillModeDemo";
 
 const steps = [
     {
         number: "1",
-        title: "Fill one application like normal",
-        description: "Start with a job, scholarship, accelerator, or grant application. Learn &amp; Fill learns and remembers the answers you already type."
+        title: "Install the browser extension",
+        description: "One click to add Learn & Fill to Chrome. It works on any website with forms.",
     },
     {
         number: "2",
-        title: "Learn &amp; Fill saves and organizes your answers",
-        description: "Your work history, school info, essays, personal details, and other application answers stay ready for the next form."
+        title: "Learn mode",
+        description: "Fill out any form like normal. Learn & Fill watches and saves your answers to your profile.",
+        demo: "learn",
     },
     {
         number: "3",
-        title: "It adapts them to the next application",
-        description: "When a new form asks for similar information in a different way, Learn &amp; Fill matches the right answers for you to review before submitting."
-    }
+        title: "Fill mode",
+        description: "Open a new form and click Fill. Learn & Fill detects the fields and populates them from your profile. Review, tweak, submit.",
+        demo: "fill",
+    },
 ];
 
 export function HowItWorks() {
@@ -29,37 +33,33 @@ export function HowItWorks() {
                         How it works
                     </h2>
                     <p className="text-lg text-slate-600">
-                        Three simple steps for repetitive applications.
+                        It's simple.
                     </p>
                 </div>
 
-                <div className="relative max-w-5xl mx-auto">
-                    {/* Connector Line */}
-                    <div className="hidden md:block absolute top-10 left-[10%] right-[10%] h-0.5 bg-gradient-to-r from-indigo-100 via-indigo-500 to-violet-100 opacity-30 z-0" />
-
-                    <div className="grid md:grid-cols-3 gap-8 relative z-10">
-                        {steps.map((step, idx) => (
-                            <motion.div
-                                key={idx}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true, margin: "-100px" }}
-                                transition={{ duration: 0.5, delay: idx * 0.2 }}
-                                className="text-center group"
-                            >
-                                <div className="w-20 h-20 mx-auto rounded-full bg-white ring-8 ring-slate-50 shadow-xl shadow-slate-200/50 flex items-center justify-center mb-8 relative group-hover:scale-110 transition-transform duration-300">
-                                    <div className="absolute inset-0 rounded-full bg-gradient-to-br from-indigo-600 to-violet-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                                    <span className="text-2xl font-bold text-indigo-600 group-hover:text-white relative z-10 transition-colors duration-300">
-                                        {step.number}
-                                    </span>
+                <div className="max-w-2xl mx-auto flex flex-col gap-16">
+                    {steps.map((step, idx) => (
+                        <motion.div
+                            key={idx}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{ duration: 0.5, delay: idx * 0.15 }}
+                        >
+                            <div className="flex items-start gap-5 mb-6">
+                                <div className="w-12 h-12 shrink-0 rounded-full bg-gradient-to-br from-indigo-600 to-violet-600 flex items-center justify-center shadow-lg shadow-indigo-500/20">
+                                    <span className="text-lg font-bold text-white">{step.number}</span>
                                 </div>
-                                <h3 className="text-xl font-bold text-slate-900 mb-4">{step.title}</h3>
-                                <p className="text-slate-600 leading-relaxed max-w-xs mx-auto">
-                                    {step.description}
-                                </p>
-                            </motion.div>
-                        ))}
-                    </div>
+                                <div>
+                                    <h3 className="text-xl font-bold text-slate-900 mb-2">{step.title}</h3>
+                                    <p className="text-slate-600 leading-relaxed">{step.description}</p>
+                                </div>
+                            </div>
+
+                            {step.demo === "learn" && <LearnModeDemo />}
+                            {step.demo === "fill" && <FillModeDemo />}
+                        </motion.div>
+                    ))}
                 </div>
             </div>
         </section>

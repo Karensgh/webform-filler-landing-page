@@ -13,8 +13,8 @@ export default function Home() {
       <main className="flex min-h-screen flex-col overflow-hidden">
         <Hero />
         <Features />
-        <Problem />
         <HowItWorks />
+        <Problem />
         <CTA />
       </main>
       <Footer />
