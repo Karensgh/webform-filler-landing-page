@@ -28,38 +28,60 @@ export function HowItWorks() {
     return (
         <section id="how-it-works" className="py-24 bg-white relative overflow-hidden">
             <div className="container relative z-10">
-                <div className="max-w-3xl mx-auto text-center mb-20">
+                <div className="max-w-3xl mx-auto text-center mb-16">
                     <h2 className="text-3xl md:text-5xl font-bold font-display text-slate-900 mb-6 tracking-tight">
                         How it works
                     </h2>
                     <p className="text-lg text-slate-600">
-                        It's simple.
+                        It&apos;s simple.
                     </p>
                 </div>
 
-                <div className="max-w-2xl mx-auto flex flex-col gap-16">
-                    {steps.map((step, idx) => (
-                        <motion.div
-                            key={idx}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-50px" }}
-                            transition={{ duration: 0.5, delay: idx * 0.15 }}
-                        >
-                            <div className="flex items-start gap-5 mb-6">
-                                <div className="w-12 h-12 shrink-0 rounded-full bg-gradient-to-br from-indigo-600 to-violet-600 flex items-center justify-center shadow-lg shadow-indigo-500/20">
-                                    <span className="text-lg font-bold text-white">{step.number}</span>
-                                </div>
-                                <div>
-                                    <h3 className="text-xl font-bold text-slate-900 mb-2">{step.title}</h3>
-                                    <p className="text-slate-600 leading-relaxed">{step.description}</p>
-                                </div>
-                            </div>
+                <div className="max-w-6xl mx-auto">
+                    {/* Step 1: Compact banner */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="bg-slate-50 border border-slate-200/60 rounded-2xl px-6 py-5 mb-10 flex items-center gap-4 shadow-sm max-w-lg mx-auto"
+                    >
+                        <div className="w-10 h-10 shrink-0 rounded-xl bg-gradient-to-br from-indigo-600 to-violet-600 flex items-center justify-center shadow-md shadow-indigo-500/20">
+                            <span className="text-lg font-bold text-white">1</span>
+                        </div>
+                        <div>
+                            <h3 className="text-base font-bold text-slate-900">{steps[0].title}</h3>
+                            <p className="text-slate-600 text-sm">{steps[0].description}</p>
+                        </div>
+                    </motion.div>
 
-                            {step.demo === "learn" && <LearnModeDemo />}
-                            {step.demo === "fill" && <FillModeDemo />}
-                        </motion.div>
-                    ))}
+                    {/* Step 2 & 3: Side by side, equal height */}
+                    <div className="grid md:grid-cols-2 gap-8">
+                        {[steps[1], steps[2]].map((step, idx) => (
+                            <motion.div
+                                key={step.number}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-50px" }}
+                                transition={{ duration: 0.5, delay: idx * 0.15 }}
+                                className="flex flex-col"
+                            >
+                                <div className="flex items-start gap-3 mb-5">
+                                    <div className="w-10 h-10 shrink-0 rounded-xl bg-gradient-to-br from-indigo-600 to-violet-600 flex items-center justify-center shadow-md shadow-indigo-500/20">
+                                        <span className="text-lg font-bold text-white">{step.number}</span>
+                                    </div>
+                                    <div>
+                                        <h3 className="text-lg font-bold text-slate-900 mb-1">{step.title}</h3>
+                                        <p className="text-slate-600 text-sm leading-relaxed">{step.description}</p>
+                                    </div>
+                                </div>
+
+                                <div className="flex-1 flex items-start">
+                                    {step.demo === "learn" && <LearnModeDemo />}
+                                    {step.demo === "fill" && <FillModeDemo />}
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>
