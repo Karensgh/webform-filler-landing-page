@@ -49,7 +49,7 @@ export function HowItWorks() {
                         className="relative z-10 bg-white border border-slate-200/60 rounded-2xl px-6 py-5 flex items-center gap-4 shadow-sm max-w-lg mx-auto"
                     >
                         <div className="w-10 h-10 shrink-0 rounded-xl bg-gradient-to-br from-indigo-600 to-violet-600 flex items-center justify-center shadow-md shadow-indigo-500/20">
-                            <span className="text-lg font-bold text-white">1</span>
+                            <span className="text-lg font-bold text-white leading-none mt-0.5">1</span>
                         </div>
                         <div>
                             <h3 className="text-base font-bold text-slate-900">{steps[0].title}</h3>
@@ -123,7 +123,7 @@ export function HowItWorks() {
                             >
                                 <div className="flex items-start gap-3 mb-5">
                                     <div className="w-10 h-10 shrink-0 rounded-xl bg-gradient-to-br from-indigo-600 to-violet-600 flex items-center justify-center shadow-md shadow-indigo-500/20">
-                                        <span className="text-lg font-bold text-white">{step.number}</span>
+                                        <span className="text-lg font-bold text-white leading-none mt-0.5">{step.number}</span>
                                     </div>
                                     <div>
                                         <h3 className="text-lg font-bold text-slate-900 mb-1">{step.title}</h3>
