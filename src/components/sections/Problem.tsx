@@ -4,24 +4,34 @@ import { motion } from "framer-motion";
 
 const useCases = [
     {
-        title: "Job and internship applications",
-        description: "Upload your resume, then re-enter your work history, education, links, and personal details across every application portal. Learn &amp; Fill keeps those answers ready.",
+        title: "Job seekers",
+        description: "Applying to 100+ roles a week? Stop re-entering your work history into Workday, Lever, and Greenhouse every time.",
         gradient: "from-blue-100 to-indigo-100"
     },
     {
-        title: "School and scholarship applications",
-        description: "Reuse your GPA, school history, demographic info, essays, and recommendation details instead of rewriting them for each new portal.",
+        title: "Students & scholarship applicants",
+        description: "GPA, extracurriculars, essays, recommendation details — reuse them across every portal instead of starting from scratch.",
         gradient: "from-fuchsia-100 to-purple-100"
     },
     {
-        title: "Accelerator applications",
-        description: "Keep your team bios, traction, market, and company story ready for each new accelerator form instead of reshaping the basics from scratch.",
+        title: "Founders & grant applicants",
+        description: "Keep your team bios, traction numbers, and company story ready for every accelerator and grant form.",
         gradient: "from-emerald-100 to-teal-100"
     },
     {
-        title: "Grant applications",
-        description: "Reuse your organization background, programs, outcomes, budgets, and boilerplate answers even when each funder asks for them differently.",
+        title: "Admin & operations staff",
+        description: "Onboarding clients, filing paperwork, submitting vendor forms — fill the same templates for different people without retyping from scratch.",
         gradient: "from-amber-100 to-orange-100"
+    },
+    {
+        title: "Anyone doing life admin",
+        description: "Insurance quotes, rental applications, loan pre-approvals, government forms — your personal details shouldn't need to be retyped every time.",
+        gradient: "from-rose-100 to-pink-100"
+    },
+    {
+        title: "Your personal information, always up to date",
+        description: "New job title? Moved to a new city? Updated your certifications? Your info is always changing — Learn & Fill grows with you so you never fill out stale details again.",
+        gradient: "from-cyan-100 to-sky-100"
     }
 ];
 
@@ -36,7 +46,7 @@ export function Problem() {
                         viewport={{ once: true }}
                         className="text-3xl md:text-4xl font-bold text-slate-900 mb-4"
                     >
-                        Best for repetitive applications.
+                        Built for anyone who fills forms repeatedly.
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: 10 }}
@@ -45,7 +55,7 @@ export function Problem() {
                         transition={{ delay: 0.1 }}
                         className="text-lg text-slate-600"
                     >
-                        It's simple. When every portal asks for the same information in a different format, Learn &amp; Fill helps you reuse what you&apos;ve already written.
+                        Whether it's for yourself or for others — if you've typed the same answers twice, Learn & Fill is for you.
                     </motion.p>
                 </div>
 

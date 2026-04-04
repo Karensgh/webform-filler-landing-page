@@ -74,7 +74,7 @@ export function CTA() {
 
                     <div className="relative z-10 max-w-2xl mx-auto">
                         <h2 className="text-4xl md:text-5xl font-bold font-display text-white mb-6 tracking-tight">
-                            Stop filling out the same forms over and over.
+                            Your life story, ready when you are.
                         </h2>
 
                         {submitted ? (
