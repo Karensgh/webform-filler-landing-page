@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
+import { ClarityInit } from "@/components/ClarityInit";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -13,7 +14,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Learn & Fill — Your AI profile for every form.",
+  title: "Learn & Fill — Your profile for every form.",
   description: "Learn & Fill is a browser extension that learns who you are and fills forms for you — job apps, scholarships, grants, insurance, and more. The more you use it, the smarter it gets.",
 };
 
@@ -27,6 +28,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${outfit.variable} antialiased font-sans bg-white text-slate-600`}
       >
+        <ClarityInit />
         {children}
       </body>
     </html>
