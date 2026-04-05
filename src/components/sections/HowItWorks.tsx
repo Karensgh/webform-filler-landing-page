@@ -57,6 +57,17 @@ export function HowItWorks() {
                         </div>
                     </motion.div>
 
+                    {/* Mobile vertical connector */}
+                    <div className="flex md:hidden justify-center my-4 pointer-events-none" aria-hidden="true">
+                        <motion.div
+                            initial={{ height: 0 }}
+                            whileInView={{ height: "2rem" }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.4 }}
+                            className="w-[3px] bg-gradient-to-b from-indigo-300 to-violet-300 rounded-full"
+                        />
+                    </div>
+
                     {/* Elegant Curved CSS Connector */}
                     <div className="hidden md:flex flex-col w-full relative z-0 -mt-3 mb-10 pointer-events-none" aria-hidden="true">
                         {/* Center Trunk */}
@@ -110,8 +121,8 @@ export function HowItWorks() {
                         </div>
                     </div>
 
-                    {/* Step 2 & 3: Side by side */}
-                    <div className="relative z-10 grid md:grid-cols-2 gap-8">
+                    {/* Step 2 & 3: Side by side on desktop, stacked on mobile */}
+                    <div className="relative z-10 grid md:grid-cols-2 gap-8 md:gap-8 gap-y-12">
                         {[steps[1], steps[2]].map((step, idx) => (
                             <motion.div
                                 key={step.number}
