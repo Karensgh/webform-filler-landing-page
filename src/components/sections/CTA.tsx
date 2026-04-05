@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ChevronRight, CheckCircle2 } from "lucide-react";
@@ -10,10 +10,20 @@ const GOOGLE_FORM_URL =
     "https://docs.google.com/forms/d/e/1FAIpQLSckg45ajp10TbxpAjNjbjDu57LmXwy8l7y6_QhezgyTNaXztg/formResponse";
 const EMAIL_ENTRY = "entry.1319085089";
 const USE_CASE_ENTRY = "entry.252676032";
+const SOURCE_ENTRY = "entry.1958519";
+const SOURCE_STORAGE_KEY = "lf_utm_source";
 
 export function CTA() {
     const [submitted, setSubmitted] = useState(false);
     const [submitting, setSubmitting] = useState(false);
+
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        const utmSource = params.get("utm_source");
+        if (utmSource) {
+            sessionStorage.setItem(SOURCE_STORAGE_KEY, utmSource);
+        }
+    }, []);
 
     function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
@@ -46,6 +56,12 @@ export function CTA() {
             form.appendChild(useCaseInput);
         }
 
+        const source = sessionStorage.getItem(SOURCE_STORAGE_KEY) || "direct";
+        const sourceInput = document.createElement("input");
+        sourceInput.name = SOURCE_ENTRY;
+        sourceInput.value = source;
+        form.appendChild(sourceInput);
+
         document.body.appendChild(form);
         form.submit();
 
@@ -74,7 +90,7 @@ export function CTA() {
 
                     <div className="relative z-10 max-w-2xl mx-auto">
                         <h2 className="text-4xl md:text-5xl font-bold font-display text-white mb-6 tracking-tight">
-                            Your life story, ready when you are.
+                            Your profile for every form.
                         </h2>
 
                         {submitted ? (
