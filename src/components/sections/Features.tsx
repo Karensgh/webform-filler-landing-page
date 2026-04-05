@@ -3,18 +3,73 @@
 import { motion } from "framer-motion";
 import { BookOpen, Wand2 } from "lucide-react";
 import { LearnAndFill } from "@/components/ui/LearnAndFill";
+import { useState, useEffect } from "react";
+
+function TypingEffect() {
+    const text = "instantly completes new forms using everything it knows about you.";
+    const [length, setLength] = useState(0);
+    const [started, setStarted] = useState(false);
+
+    useEffect(() => {
+        if (!started) return;
+        const interval = setInterval(() => {
+            setLength(prev => {
+                if (prev >= text.length) {
+                    clearInterval(interval);
+                    return prev;
+                }
+                return prev + 2;
+            });
+        }, 20); // Fast realistic typing speed
+        return () => clearInterval(interval);
+    }, [started]);
+
+    return (
+        <motion.div
+            onViewportEnter={() => setTimeout(() => setStarted(true), 2600)}
+            viewport={{ once: true }}
+            className="min-h-[40px] inline"
+        >
+            <span>{text.substring(0, length)}</span>
+            <motion.span
+                animate={{ opacity: [1, 0, 1] }}
+                transition={{ repeat: Infinity, duration: 0.8, ease: "linear" }}
+                className="inline-block w-[2px] h-3.5 bg-violet-500 align-middle ml-[2px]"
+            />
+        </motion.div>
+    );
+}
 
 const features = [
     {
         title: "More than basic autofill",
         description: null,
         richDescription: (
-            <div className="space-y-4 relative z-10">
-                <p className="text-slate-400 line-through text-sm font-medium">Chrome autofill handles basics.</p>
+            <div className="space-y-4 relative z-10 transition-all">
+                <div className="relative inline-block mt-1">
+                    <p className="text-slate-400 text-sm font-medium">Chrome autofill handles basics.</p>
+                    <motion.div
+                        initial={{ width: 0 }}
+                        whileInView={{ width: "100%" }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.8, ease: "easeOut" }}
+                        className="absolute top-1/2 left-0 h-[1.5px] bg-slate-400"
+                    />
+                </div>
                 <div className="pt-2">
-                    <p className="text-slate-700 font-medium leading-relaxed">
-                        <LearnAndFill /> helps with work history, insurance quotes, rental applications, and repeated application answers <span className="font-bold text-indigo-600 bg-indigo-50 px-1 rounded">because it knows you.</span>
-                    </p>
+                    <div className="text-slate-700 font-medium leading-relaxed">
+                        <LearnAndFill /> helps with work history, insurance quotes, rental applications, and repeated application answers
+                        <span className="relative inline-block font-bold text-indigo-700 px-1 ml-1 overflow-hidden rounded">
+                            <motion.span
+                                initial={{ x: "-100%" }}
+                                whileInView={{ x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.6, delay: 1.6, ease: "easeOut" }}
+                                className="absolute inset-0 bg-indigo-100 z-[-1]"
+                            />
+                            because it knows you.
+                        </span>
+                    </div>
                 </div>
             </div>
         ),
@@ -45,12 +100,65 @@ const features = [
         richDescription: (
             <div className="space-y-3 relative z-10">
                 <p className="text-slate-700 font-medium">Two simple modes:</p>
-                <div className="bg-indigo-50/50 rounded-xl p-3 border border-indigo-100/50">
-                    <p className="text-slate-600 text-sm leading-relaxed"><span className="font-bold text-indigo-600 flex items-center gap-1.5 mb-1"><BookOpen className="w-3.5 h-3.5" /> Learn</span> builds your profile as you fill forms the normal way.</p>
-                </div>
-                <div className="bg-violet-50/50 rounded-xl p-3 border border-violet-100/50">
-                    <p className="text-slate-600 text-sm leading-relaxed"><span className="font-bold text-violet-600 flex items-center gap-1.5 mb-1"><Wand2 className="w-3.5 h-3.5" /> Fill</span> instantly completes new forms using everything it knows about you.</p>
-                </div>
+
+                {/* Learn Box (Scan Effect) */}
+                <motion.div
+                    initial={{ backgroundColor: "rgba(238, 242, 255, 0)", borderColor: "rgba(224, 231, 255, 0)" }}
+                    whileInView={{ backgroundColor: "rgba(238, 242, 255, 1)", borderColor: "rgba(224, 231, 255, 1)" }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.5 }}
+                    className="rounded-xl p-3 border relative overflow-hidden"
+                >
+                    {/* Blue Scanner Beam */}
+                    <motion.div
+                        initial={{ top: "-20%", opacity: 0 }}
+                        whileInView={{ top: "120%", opacity: [0, 1, 1, 0] }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1.5, delay: 0.8, ease: "linear" }}
+                        className="absolute left-0 right-0 h-10 bg-gradient-to-b from-transparent via-indigo-400/20 to-indigo-400/60 border-b-2 border-indigo-400 z-0 pointer-events-none"
+                    />
+                    <div className="relative z-10 text-slate-600 text-sm leading-relaxed">
+                        <div className="font-bold text-indigo-600 flex items-center gap-1.5 mb-1">
+                            <motion.span
+                                initial={{ rotate: 0 }}
+                                whileInView={{ rotate: [0, -15, 15, -15, 0] }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: 1.0 }}
+                            >
+                                <BookOpen className="w-3.5 h-3.5" />
+                            </motion.span>
+                            Learn
+                        </div>
+                        builds your profile as you fill forms the normal way.
+                    </div>
+                </motion.div>
+
+                {/* Fill Box (Type Effect) */}
+                <motion.div
+                    initial={{ backgroundColor: "rgba(245, 243, 255, 0)", borderColor: "rgba(237, 233, 254, 0)" }}
+                    whileInView={{ backgroundColor: "rgba(245, 243, 255, 1)", borderColor: "rgba(237, 233, 254, 1)" }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 2.2 }}
+                    className="rounded-xl p-3 border"
+                >
+                    <div className="text-slate-600 text-sm leading-relaxed">
+                        <div className="font-bold text-violet-600 flex items-center gap-1.5 mb-1">
+                            <motion.span
+                                initial={{ scale: 1 }}
+                                whileInView={{ scale: [1, 1.3, 1] }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.4, delay: 2.4 }}
+                            >
+                                <Wand2 className="w-3.5 h-3.5" />
+                            </motion.span>
+                            Fill
+                        </div>
+                        <div className="min-h-[40px]">
+                            <TypingEffect />
+                        </div>
+                    </div>
+                </motion.div>
+
                 <p className="text-slate-600 font-medium text-xs mt-2 uppercase tracking-wider">The more you use it, the more accurate and complete it becomes.</p>
             </div>
         ),
@@ -78,7 +186,7 @@ export function Features() {
                     </p>
                 </motion.div>
 
-                <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 max-w-[70rem] mx-auto px-4">
                     {features.map((feature, idx) => (
                         <motion.div
                             key={idx}
@@ -86,7 +194,7 @@ export function Features() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1 }}
-                            className="bg-white rounded-3xl p-8 md:p-10 border border-slate-200/60 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-indigo-200/60 transition-all duration-300 group relative overflow-hidden flex flex-col h-full"
+                            className="bg-white rounded-[2rem] p-6 lg:p-8 border border-slate-200/60 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-indigo-200/60 transition-all duration-300 group relative overflow-hidden flex flex-col h-full"
                         >
                             {/* Watermark Number */}
                             <div className="absolute top-4 right-6 text-[80px] font-black font-display text-slate-50 group-hover:text-indigo-50/50 transition-colors duration-500 pointer-events-none select-none z-0">
@@ -94,7 +202,7 @@ export function Features() {
                             </div>
 
                             <div className="relative z-10 flex-1">
-                                <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-6">{feature.title}</h3>
+                                <h3 className="text-lg lg:text-[1.35rem] font-bold text-slate-900 mb-5 leading-tight">{feature.title}</h3>
                                 {feature.richDescription || <p className="text-slate-600 text-sm leading-relaxed">{feature.description}</p>}
                             </div>
                         </motion.div>
