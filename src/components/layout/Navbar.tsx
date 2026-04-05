@@ -42,7 +42,7 @@ export function Navbar() {
                     <Link href="#problem" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Use Cases</Link>
                     <a href="#waitlist">
                         <Button className="rounded-full bg-slate-900 hover:bg-slate-800 text-white shadow-md shadow-slate-900/10">
-                            Get early access
+                            Join the waitlist
                         </Button>
                     </a>
                 </div>
@@ -59,7 +59,7 @@ export function Navbar() {
                     <Link href="#problem" onClick={() => setIsOpen(false)} className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Use Cases</Link>
                     <a href="#waitlist" onClick={() => setIsOpen(false)}>
                         <Button className="w-full rounded-full bg-slate-900 hover:bg-slate-800 text-white shadow-md shadow-slate-900/10">
-                            Get early access
+                            Join the waitlist
                         </Button>
                     </a>
                 </div>
