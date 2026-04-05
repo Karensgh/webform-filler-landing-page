@@ -90,7 +90,7 @@ export function CTA() {
 
                     <div className="relative z-10 max-w-2xl mx-auto">
                         <h2 className="text-4xl md:text-5xl font-bold font-display text-white mb-6 tracking-tight">
-                            Your profile for every form.
+                            Your AI profile for every form.
                         </h2>
 
                         {submitted ? (

@@ -14,7 +14,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Learn & Fill — Your profile for every form.",
+  title: "Learn & Fill — Your AI profile for every form.",
   description: "Learn & Fill is a browser extension that learns who you are and fills forms for you — job apps, scholarships, grants, insurance, and more. The more you use it, the smarter it gets.",
 };
 
