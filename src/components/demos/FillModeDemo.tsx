@@ -5,21 +5,21 @@ import { motion, AnimatePresence } from "framer-motion";
 import { BookOpen, Wand2, CheckCircle2 } from "lucide-react";
 
 const formFields = [
-    { label: "Full Name", value: "Alex Chen" },
-    { label: "Email Address", value: "alex.chen@gmail.com" },
-    { label: "Phone Number", value: "(415) 555-0182" },
-    { label: "LinkedIn URL", value: "linkedin.com/in/alexchen" },
-    { label: "Years of Experience", value: "5" },
-    { label: "Current Job Title", value: "Senior Software Engineer" },
-    { label: "Why are you interested in this role?", value: "I want to lead a product-focused engineering team at a company solving real user pain points. Your mission to simplify workflows resonates with my experience building developer tools.", multiline: true },
-    { label: "Describe a technical challenge you solved", value: "I redesigned our real-time data pipeline to handle 10x throughput by migrating from REST polling to WebSocket streaming, cutting latency from 8s to under 200ms.", multiline: true },
+    { label: "Company Name", value: "Nova Mobile" },
+    { label: "Website", value: "novamobile.co" },
+    { label: "Team Size", value: "4" },
+    { label: "Total Funding Raised", value: "$250,000 (angel)" },
+    { label: "What is your company going to make? Please describe your product and what it does or will do.", value: "A modular smartphone where users swap the camera, battery, and screen in under 30 seconds — no tools, no soldering. We're rebuilding the phone as a platform users actually own.", multiline: true },
+    { label: "How far along are you?", value: "Working prototype with swappable camera and battery modules. 12,000 reservations collected, 3 hardware partners signed, first small batch shipping in Q3.", multiline: true },
+    { label: "Who are your competitors? What do you understand about your business that they don't?", value: "Framework proved modular laptops work. Fairphone tried modular phones but optimized for repairability, not performance. We understand that upgradability — not repair — is what makes users stay on a platform for 10 years.", multiline: true },
+    { label: "How do or will you make money? How much could you make?", value: "Phones at $699 plus recurring module upgrades ($80-$200 each, 2-3x/yr). 1.4B smartphones sold yearly — capturing 0.1% is $1B revenue.", multiline: true },
 ];
 
 const profiles = [
-    { name: "Software Engineer" },
-    { name: "AI Engineer" },
-    { name: "Data Scientist" },
-    { name: "ML Engineer" },
+    { name: "Founder" },
+    { name: "Job profile" },
+    { name: "Personal information" },
+    { name: "Insurance details" },
 ];
 
 export function FillModeDemo() {
@@ -62,7 +62,7 @@ export function FillModeDemo() {
     useEffect(() => {
         if (phase !== "show-profiles") return;
         const timeout = setTimeout(() => {
-            setSelectedProfile(1); // AI Engineer
+            setSelectedProfile(0); // Founder
             setTimeout(() => setPhase("filling"), 500);
         }, 700);
         return () => clearTimeout(timeout);
@@ -103,7 +103,7 @@ export function FillModeDemo() {
                         <div className="w-3 h-3 rounded-full bg-green-400" />
                     </div>
                     <div className="flex-1 bg-white rounded-md px-3 py-1 text-xs text-slate-400 border border-slate-200 ml-2">
-                        careers.startup.io/apply
+                        apply.accelerator.com/apply
                     </div>
                 </div>
 
@@ -187,7 +187,7 @@ export function FillModeDemo() {
 
                 {/* Form — empty fields that get filled */}
                 <div className="p-6 space-y-3 max-h-[420px] overflow-y-auto">
-                    <p className="text-sm font-semibold text-slate-800 mb-3">AI Engineer — Application</p>
+                    <p className="text-sm font-semibold text-slate-800 mb-3">Accelerator — Application</p>
 
                     {formFields.map((field, i) => (
                         <div key={field.label} className="relative">
@@ -243,7 +243,7 @@ export function FillModeDemo() {
                         className="mt-4 flex items-center justify-center gap-2 text-sm text-emerald-600 font-medium"
                     >
                         <CheckCircle2 className="w-4 h-4" />
-                        {formFields.length}{" "}fields filled from &quot;AI Engineer&quot; profile
+                        {formFields.length}{" "}fields filled from &quot;Founder&quot; profile
                     </motion.div>
                 )}
             </AnimatePresence>
