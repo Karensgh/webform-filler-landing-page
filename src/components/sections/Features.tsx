@@ -118,16 +118,16 @@ function LearnsCard() {
                 className="rounded-xl p-3 border"
             >
                 <div className="text-slate-600 text-sm leading-relaxed">
-                    <div className="font-bold text-violet-600 flex items-center gap-1.5 mb-1">
+                    <div className="font-bold flex items-center gap-1.5 mb-1">
                         <motion.span
                             key={`wand-${cycle}`}
                             animate={{ scale: [1, 1.3, 1] }}
                             transition={{ duration: 0.4, delay: 2.4 }}
-                            className="inline-flex"
+                            className="inline-flex text-violet-600"
                         >
                             <Wand2 className="w-3.5 h-3.5" />
                         </motion.span>
-                        Fill
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600">Fill</span>
                     </div>
                     <div className="min-h-[40px]">
                         <span>{typed}</span>
@@ -177,7 +177,7 @@ const features = [
 
 export function Features() {
     return (
-        <section id="features" className="py-24 bg-slate-50 relative overflow-hidden">
+        <section id="features" className="py-24 bg-gradient-to-b from-white to-indigo-100/60 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-indigo-100/40 via-transparent to-transparent pointer-events-none" />
 
             <div className="container relative z-10">

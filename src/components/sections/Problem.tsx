@@ -77,7 +77,7 @@ const useCases = [
 
 export function Problem() {
   return (
-    <section id="problem" className="py-24 bg-slate-50 relative">
+    <section id="problem" className="py-24 bg-gradient-to-b from-violet-100/50 to-white relative">
       <div className="container">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <motion.h2

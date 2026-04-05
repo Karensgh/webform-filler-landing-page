@@ -7,22 +7,29 @@ import { LearnAndFill } from "@/components/ui/LearnAndFill";
 
 export function Hero() {
     return (
-        <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-white">
+        <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-gradient-to-b from-indigo-50/80 via-white to-white">
             {/* Abstract animated background blobs */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
                 <motion.div
                     animate={{
-                        transform: ["translate(0px, 0px) scale(1)", "translate(20px, -20px) scale(1.05)", "translate(0px, 0px) scale(1)"]
+                        transform: ["translate(0px, 0px) scale(1)", "translate(30px, -30px) scale(1.1)", "translate(0px, 0px) scale(1)"]
                     }}
                     transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-                    className="absolute -top-[20%] -right-[10%] w-[70%] h-[70%] rounded-full bg-gradient-to-b from-indigo-100/50 to-violet-100/20 blur-3xl opacity-60"
+                    className="absolute -top-[20%] -right-[10%] w-[60%] h-[60%] rounded-full bg-gradient-to-br from-indigo-400 to-violet-400 blur-3xl opacity-[0.15]"
                 />
                 <motion.div
                     animate={{
-                        transform: ["translate(0px, 0px) scale(1)", "translate(-20px, 20px) scale(1.05)", "translate(0px, 0px) scale(1)"]
+                        transform: ["translate(0px, 0px) scale(1)", "translate(-30px, 30px) scale(1.1)", "translate(0px, 0px) scale(1)"]
                     }}
                     transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-                    className="absolute top-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-gradient-to-tr from-violet-100/50 to-fuchsia-100/20 blur-3xl opacity-60"
+                    className="absolute top-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-gradient-to-tr from-violet-400 to-fuchsia-400 blur-3xl opacity-[0.15]"
+                />
+                <motion.div
+                    animate={{
+                        transform: ["translate(0px, 0px) scale(1)", "translate(0px, 40px) scale(1.2)", "translate(0px, 0px) scale(1)"]
+                    }}
+                    transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+                    className="absolute bottom-[0%] left-[20%] w-[40%] h-[40%] rounded-full bg-gradient-to-r from-blue-400 to-indigo-400 blur-3xl opacity-[0.15]"
                 />
             </div>
 
