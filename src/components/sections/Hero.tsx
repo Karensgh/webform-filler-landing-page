@@ -40,7 +40,7 @@ export function Hero() {
                     transition={{ duration: 0.6, ease: "easeOut" }}
                 >
                     <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-display tracking-tight text-slate-900 mb-6 leading-[1.1] relative inline-block">
-                        Your AI profile for {" "}
+                        Your profile for {" "}
                         <span className="relative whitespace-nowrap">
                             <motion.span
                                 animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
