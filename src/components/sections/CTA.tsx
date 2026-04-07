@@ -115,26 +115,13 @@ export function CTA() {
                                     className="max-w-md mx-auto mb-6"
                                 >
                                     <div className="flex flex-col gap-3">
-                                        <div className="flex flex-col sm:flex-row gap-3">
-                                            <Input
-                                                type="email"
-                                                name="email"
-                                                placeholder="Enter your email address"
-                                                required
-                                                className="h-14 bg-white/5 border-white/10 text-white placeholder:text-slate-400 focus-visible:ring-indigo-500 focus-visible:ring-offset-[#0B1121] rounded-full px-6 flex-1 text-base transition-colors hover:bg-white/10"
-                                            />
-                                            <Button
-                                                type="submit"
-                                                size="lg"
-                                                disabled={submitting}
-                                                className="h-14 rounded-full px-8 bg-indigo-600 hover:bg-indigo-500 text-white font-medium group disabled:opacity-50 transition-all shadow-lg hover:shadow-xl hover:shadow-indigo-500/25 sm:whitespace-nowrap"
-                                            >
-                                                {submitting ? "Sending..." : "Join the waitlist"}
-                                                {!submitting && (
-                                                    <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                                                )}
-                                            </Button>
-                                        </div>
+                                        <Input
+                                            type="email"
+                                            name="email"
+                                            placeholder="Enter your email address"
+                                            required
+                                            className="h-14 bg-white/5 border-white/10 text-white placeholder:text-slate-400 focus-visible:ring-indigo-500 focus-visible:ring-offset-[#0B1121] rounded-full px-6 text-base transition-colors hover:bg-white/10"
+                                        />
                                         <select
                                             name="useCase"
                                             className="w-full h-14 rounded-full px-6 bg-white/5 border border-white/10 text-slate-300 text-sm appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-[#0B1121] transition-colors hover:bg-white/10"
@@ -147,6 +134,17 @@ export function CTA() {
                                             <option value="Vendor onboarding">Vendor onboarding</option>
                                             <option value="Other">Other</option>
                                         </select>
+                                        <Button
+                                            type="submit"
+                                            size="lg"
+                                            disabled={submitting}
+                                            className="w-full h-14 rounded-full px-8 bg-indigo-600 hover:bg-indigo-500 text-white font-medium group disabled:opacity-50 transition-all shadow-lg hover:shadow-xl hover:shadow-indigo-500/25"
+                                        >
+                                            {submitting ? "Sending..." : "Join the waitlist"}
+                                            {!submitting && (
+                                                <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                                            )}
+                                        </Button>
                                     </div>
                                 </form>
                                 <p className="text-sm text-slate-400">

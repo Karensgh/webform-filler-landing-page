@@ -234,19 +234,21 @@ export function FillModeDemo() {
                 </div>
             </div>
 
-            <AnimatePresence>
-                {phase === "done" && (
-                    <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0 }}
-                        className="mt-4 flex items-center justify-center gap-2 text-sm text-emerald-600 font-medium"
-                    >
-                        <CheckCircle2 className="w-4 h-4" />
-                        {formFields.length}{" "}fields filled from &quot;Founder&quot; profile
-                    </motion.div>
-                )}
-            </AnimatePresence>
+            <div className="h-6 mt-4">
+                <AnimatePresence>
+                    {phase === "done" && (
+                        <motion.div
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0 }}
+                            className="flex items-center justify-center gap-2 text-sm text-emerald-600 font-medium"
+                        >
+                            <CheckCircle2 className="w-4 h-4" />
+                            {formFields.length}{" "}fields filled from &quot;Founder&quot; profile
+                        </motion.div>
+                    )}
+                </AnimatePresence>
+            </div>
         </div>
     );
 }
