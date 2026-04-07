@@ -130,7 +130,7 @@ function LearnsCard() {
                         </motion.span>
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600">Fill</span>
                     </div>
-                    <div className="min-h-[40px]">
+                    <div className="h-[80px]">
                         <span>{typed}</span>
                         <motion.span
                             animate={{ opacity: [1, 0, 1] }}
