@@ -95,7 +95,7 @@ export function Problem() {
             transition={{ delay: 0.1 }}
             className="text-lg text-slate-600"
           >
-            Whether it&apos;s for yourself or for others — if you&apos;ve typed the same answers twice, <LearnAndFill /> is for you.
+            If you&apos;ve typed the same answers twice, <LearnAndFill /> is for you.
           </motion.p>
         </div>
 

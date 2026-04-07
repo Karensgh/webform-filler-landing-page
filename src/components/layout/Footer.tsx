@@ -17,7 +17,7 @@ export function Footer() {
                             />
                         </Link>
                         <p className="text-slate-500 max-w-xs mb-6">
-                            Your AI profile for every form
+                            Your AI memory for every form
                         </p>
                     </div>
 

@@ -59,7 +59,7 @@ export function Hero() {
                     transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
                     className="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed"
                 >
-                    Stop retyping the same answers. <LearnAndFill /> learns who you are and fills any form for you — job apps, scholarships, grants, insurance, and more.
+                    Stop retyping the same answers. <LearnAndFill /> learns who you are and fills any form intelligently — adapting to each question's context and requirements.
                 </motion.p>
 
                 <motion.div

@@ -13,13 +13,13 @@ const steps = [
     {
         number: "2",
         title: "Learn mode",
-        description: "Fill out any form like normal. Learn & Fill watches and saves your answers to your profile.",
+        description: "Fill out any form like normal. Learn & Fill watches, understands, and organizes your answers into your AI memory.",
         demo: "learn",
     },
     {
         number: "3",
         title: "Fill mode",
-        description: "Open a new form and click Fill. Learn & Fill detects the fields and populates them from your profile. Review, tweak, submit.",
+        description: "Learn & Fill reads each question, adapts your answers to fit the requirements — word limits, format, context — and fills them in. Review, submit.",
         demo: "fill",
     },
 ];

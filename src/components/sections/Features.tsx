@@ -77,7 +77,7 @@ function LearnsCard() {
 
     return (
         <div className="space-y-3 relative z-10">
-            <p className="text-slate-700 font-medium">No setup needed. Just install and go:</p>
+            <p className="text-slate-700 font-medium">Learn mode and Fill mode:</p>
 
             {/* Learn box — scanner loops */}
             <motion.div
@@ -150,7 +150,7 @@ const features = [
         content: <AutofillCard />,
     },
     {
-        title: "More than basic autofill",
+        title: "Your AI memory for forms",
         content: (
             <div className="space-y-4 relative z-10">
                 <p className="text-slate-700 leading-relaxed font-medium">
@@ -188,7 +188,7 @@ export function Features() {
                     className="text-center mb-16"
                 >
                     <h2 className="text-4xl md:text-5xl font-bold font-display tracking-tight text-slate-900 mb-4">
-                        Your AI memory for forms
+                        More than basic autofill
                     </h2>
                     <p className="text-lg text-slate-600 max-w-2xl mx-auto">
                         Chrome fills in your name. <LearnAndFill /> learns and fills in your story.
