@@ -16,20 +16,21 @@ function AutofillCard() {
 
     return (
         <div className="space-y-4 relative z-10">
-            <div className="relative inline-block mt-1">
-                <p className="text-slate-400 text-sm font-medium">Chrome autofill handles basics.</p>
-                <motion.div
+            <div className="relative mt-1">
+                <motion.p
                     key={`strike-${cycle}`}
-                    initial={{ width: 0 }}
-                    animate={{ width: "100%" }}
+                    initial={{ textDecorationColor: "rgba(148, 163, 184, 0)" }}
+                    animate={{ textDecorationColor: "rgba(148, 163, 184, 1)" }}
                     transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
-                    className="absolute top-1/2 left-0 h-[1.5px] bg-slate-400"
-                />
+                    className="text-slate-400 text-sm font-medium line-through"
+                >
+                    Chrome autofill fills your name and address. That&apos;s it.
+                </motion.p>
             </div>
             <div className="pt-2">
                 <div className="text-slate-700 font-medium leading-relaxed">
-                    <LearnAndFill /> helps with work history, insurance quotes, rental applications, and repeated application answers
-                    <span className="relative inline-block font-bold text-indigo-700 px-1 ml-1 overflow-hidden rounded">
+                    Other tools ignore the question, paste the wrong length, and need manual setup. <LearnAndFill /> reads each prompt, adapts to word limits, and fills the right answer —
+                    <span className="relative inline-block font-bold text-indigo-700 px-1 overflow-hidden rounded">
                         <motion.span
                             key={`highlight-${cycle}`}
                             initial={{ x: "-100%" }}
@@ -37,7 +38,7 @@ function AutofillCard() {
                             transition={{ duration: 0.6, delay: 1.2, ease: "easeOut" }}
                             className="absolute inset-0 bg-indigo-100 z-[-1]"
                         />
-                        because it knows you.
+                        because it actually understands what's being asked.
                     </span>
                 </div>
             </div>
@@ -47,7 +48,7 @@ function AutofillCard() {
 
 // Card 3: scanner beam + typing — loops
 function LearnsCard() {
-    const fullText = "instantly completes new forms using everything it knows about you.";
+    const fullText = "pulls the right details and adapts them for each form's context and requirements.";
     const [typed, setTyped] = useState("");
     const [cycle, setCycle] = useState(0);
 
@@ -76,7 +77,7 @@ function LearnsCard() {
 
     return (
         <div className="space-y-3 relative z-10">
-            <p className="text-slate-700 font-medium">Two simple modes:</p>
+            <p className="text-slate-700 font-medium">No setup needed. Just install and go:</p>
 
             {/* Learn box — scanner loops */}
             <motion.div
@@ -105,7 +106,7 @@ function LearnsCard() {
                         </motion.span>
                         Learn
                     </div>
-                    builds your profile as you fill forms the normal way.
+                    watches you fill forms and organizes your information in the background.
                 </div>
             </motion.div>
 
@@ -139,23 +140,21 @@ function LearnsCard() {
                     </div>
                 </div>
             </motion.div>
-
-            <p className="text-slate-600 font-medium text-xs mt-2 uppercase tracking-wider">The more you use it, the more accurate and complete it becomes.</p>
         </div>
     );
 }
 
 const features = [
     {
-        title: "More than basic autofill",
+        title: "Fills smart, not just fast",
         content: <AutofillCard />,
     },
     {
-        title: "Profiles for different contexts",
+        title: "More than basic autofill",
         content: (
             <div className="space-y-4 relative z-10">
                 <p className="text-slate-700 leading-relaxed font-medium">
-                    Create separate profiles for:
+                    An intelligent data bank that grows with you:
                 </p>
                 <div className="grid grid-cols-2 gap-2">
                     <div className="bg-slate-50 border border-slate-100 rounded-lg p-2 flex items-center gap-2 text-xs font-semibold text-slate-700"><div className="w-1.5 h-1.5 rounded-full bg-indigo-500" /> Job searches</div>
@@ -170,7 +169,7 @@ const features = [
         ),
     },
     {
-        title: "Learns as you go",
+        title: "Two simple modes",
         content: <LearnsCard />,
     },
 ];
@@ -189,7 +188,7 @@ export function Features() {
                     className="text-center mb-16"
                 >
                     <h2 className="text-4xl md:text-5xl font-bold font-display tracking-tight text-slate-900 mb-4">
-                        More than autofill
+                        Your AI memory for forms
                     </h2>
                     <p className="text-lg text-slate-600 max-w-2xl mx-auto">
                         Chrome fills in your name. <LearnAndFill /> learns and fills in your story.
@@ -216,6 +215,15 @@ export function Features() {
                         </motion.div>
                     ))}
                 </div>
+
+                <motion.p
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="text-center text-slate-500 font-medium text-sm mt-10 tracking-wide"
+                >
+                    The more you use it, the more it knows. The more it knows, the faster you go.
+                </motion.p>
             </div>
         </section>
     );
