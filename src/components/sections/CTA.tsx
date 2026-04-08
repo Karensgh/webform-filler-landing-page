@@ -145,7 +145,7 @@ export function CTA() {
                                             disabled={submitting}
                                             className="w-full h-14 rounded-full px-8 bg-indigo-600 hover:bg-indigo-500 text-white font-medium group disabled:opacity-50 transition-all shadow-lg hover:shadow-xl hover:shadow-indigo-500/25"
                                         >
-                                            {submitting ? "Sending..." : "Join the waitlist"}
+                                            {submitting ? "Sending..." : "Get early access"}
                                             {!submitting && (
                                                 <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                                             )}

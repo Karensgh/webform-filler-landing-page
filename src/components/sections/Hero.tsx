@@ -71,7 +71,7 @@ export function Hero() {
                     <a href="#waitlist">
                         <Button size="lg" className="relative group overflow-hidden rounded-full h-14 px-8 text-base bg-indigo-600 hover:bg-indigo-500 text-white shadow-lg shadow-indigo-600/20 hover:shadow-xl hover:shadow-indigo-600/30 transition-all hover:-translate-y-0.5 border-0">
                             <span className="relative z-10 flex items-center">
-                                Join the waitlist
+                                Get early access
                                 <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                             </span>
                             {/* Animated Button Shimmer */}
