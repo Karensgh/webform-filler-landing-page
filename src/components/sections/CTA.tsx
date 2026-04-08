@@ -65,6 +65,11 @@ export function CTA() {
         document.body.appendChild(form);
         form.submit();
 
+        // Fire Reddit conversion event
+        if (typeof window !== "undefined" && window.rdt) {
+            window.rdt("track", "SignUp");
+        }
+
         // Clean up and show success after a short delay
         setTimeout(() => {
             document.body.removeChild(form);
