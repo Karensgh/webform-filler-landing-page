@@ -2,48 +2,44 @@
 
 import { motion } from "framer-motion";
 import { LearnAndFill } from "@/components/ui/LearnAndFill";
-import { Briefcase, GraduationCap, Rocket, Settings2, Home, RefreshCw } from "lucide-react";
+import { Briefcase, Rocket, PenLine, Settings2, Home, RefreshCw } from "lucide-react";
 
 const useCases = [
   {
-    title: "Job seekers",
-    description: null,
+    title: "Job seekers & scholarship applicants",
     richDescription: (
       <div className="text-sm text-slate-600 leading-relaxed">
-        Stop re-entering your <span className="font-medium text-slate-800 bg-slate-100 px-1.5 py-0.5 rounded-md leading-6 inline-block mx-0.5 border border-slate-200/60">work history</span>, <span className="font-medium text-slate-800 bg-slate-100 px-1.5 py-0.5 rounded-md leading-6 inline-block mx-0.5 border border-slate-200/60">education</span>, and <span className="font-medium text-slate-800 bg-slate-100 px-1.5 py-0.5 rounded-md leading-6 inline-block mx-0.5 border border-slate-200/60">repeated answers</span> into <span className="font-bold text-blue-700">Workday</span>, <span className="font-bold text-blue-700">Lever</span>, and <span className="font-bold text-blue-700">Greenhouse</span> every time you apply.
+        Reuse your <span className="font-medium text-slate-800 bg-slate-100 px-1.5 py-0.5 rounded-md leading-6 inline-block mx-0.5 border border-slate-200/60">work history</span>, <span className="font-medium text-slate-800 bg-slate-100 px-1.5 py-0.5 rounded-md leading-6 inline-block mx-0.5 border border-slate-200/60">academic details</span>, <span className="font-medium text-slate-800 bg-slate-100 px-1.5 py-0.5 rounded-md leading-6 inline-block mx-0.5 border border-slate-200/60">essays</span>, and <span className="font-medium text-slate-800 bg-slate-100 px-1.5 py-0.5 rounded-md leading-6 inline-block mx-0.5 border border-slate-200/60">repeated answers</span> across applications — while keeping different versions for different roles or opportunities.
       </div>
     ),
     gradient: "from-blue-100 to-indigo-100",
     icon: <Briefcase className="w-6 h-6 text-indigo-600" />
   },
   {
-    title: "Students & scholarship applicants",
-    description: null,
+    title: "Startup founders",
     richDescription: (
       <div className="text-sm text-slate-600 leading-relaxed">
-        Reuse your <span className="font-medium text-slate-800 bg-slate-100 px-1.5 py-0.5 rounded-md leading-6 inline-block mx-0.5 border border-slate-200/60">GPA</span>, <span className="font-medium text-slate-800 bg-slate-100 px-1.5 py-0.5 rounded-md leading-6 inline-block mx-0.5 border border-slate-200/60">extracurriculars</span>, <span className="font-medium text-slate-800 bg-slate-100 px-1.5 py-0.5 rounded-md leading-6 inline-block mx-0.5 border border-slate-200/60">essays</span>, and <span className="font-medium text-slate-800 bg-slate-100 px-1.5 py-0.5 rounded-md leading-6 inline-block mx-0.5 border border-slate-200/60">recommendation details</span> across every application instead of starting from scratch.
-      </div>
-    ),
-    gradient: "from-fuchsia-100 to-purple-100",
-    icon: <GraduationCap className="w-6 h-6 text-fuchsia-600" />
-  },
-  {
-    title: "Founders & grant applicants",
-    description: null,
-    richDescription: (
-      <div className="text-sm text-slate-600 leading-relaxed">
-        Keep your <span className="font-medium text-slate-800 bg-slate-100 px-1.5 py-0.5 rounded-md leading-6 inline-block mx-0.5 border border-slate-200/60">team bios</span>, <span className="font-medium text-slate-800 bg-slate-100 px-1.5 py-0.5 rounded-md leading-6 inline-block mx-0.5 border border-slate-200/60">traction metrics</span>, and <span className="font-medium text-slate-800 bg-slate-100 px-1.5 py-0.5 rounded-md leading-6 inline-block mx-0.5 border border-slate-200/60">company story</span> ready for every <span className="font-bold text-emerald-700">accelerator</span>, <span className="font-bold text-emerald-700">grant</span>, and <span className="font-bold text-emerald-700">funding application</span>.
+        Save your <span className="font-medium text-slate-800 bg-slate-100 px-1.5 py-0.5 rounded-md leading-6 inline-block mx-0.5 border border-slate-200/60">company story</span>, <span className="font-medium text-slate-800 bg-slate-100 px-1.5 py-0.5 rounded-md leading-6 inline-block mx-0.5 border border-slate-200/60">traction metrics</span>, and <span className="font-medium text-slate-800 bg-slate-100 px-1.5 py-0.5 rounded-md leading-6 inline-block mx-0.5 border border-slate-200/60">team details</span> once, then reuse and adapt them for <span className="font-bold text-emerald-700">accelerator</span>, <span className="font-bold text-emerald-700">grant</span>, and <span className="font-bold text-emerald-700">investor</span> applications.
       </div>
     ),
     gradient: "from-emerald-100 to-teal-100",
     icon: <Rocket className="w-6 h-6 text-teal-600" />
   },
   {
-    title: "Admin & operations teams",
-    description: null,
+    title: "Grant writers & fundraisers",
     richDescription: (
       <div className="text-sm text-slate-600 leading-relaxed">
-        <span className="font-medium text-slate-800 bg-slate-100 px-1.5 py-0.5 rounded-md leading-6 inline-block mx-0.5 border border-slate-200/60">Onboard clients</span>, <span className="font-medium text-slate-800 bg-slate-100 px-1.5 py-0.5 rounded-md leading-6 inline-block mx-0.5 border border-slate-200/60">submit vendor forms</span>, and <span className="font-medium text-slate-800 bg-slate-100 px-1.5 py-0.5 rounded-md leading-6 inline-block mx-0.5 border border-slate-200/60">handle repetitive paperwork</span> without retyping the same information over and over.
+        Keep your <span className="font-medium text-slate-800 bg-slate-100 px-1.5 py-0.5 rounded-md leading-6 inline-block mx-0.5 border border-slate-200/60">mission</span>, <span className="font-medium text-slate-800 bg-slate-100 px-1.5 py-0.5 rounded-md leading-6 inline-block mx-0.5 border border-slate-200/60">program descriptions</span>, <span className="font-medium text-slate-800 bg-slate-100 px-1.5 py-0.5 rounded-md leading-6 inline-block mx-0.5 border border-slate-200/60">outcomes</span>, and <span className="font-medium text-slate-800 bg-slate-100 px-1.5 py-0.5 rounded-md leading-6 inline-block mx-0.5 border border-slate-200/60">org background</span> ready to reshape for each funder&apos;s format, word count, and application portal.
+      </div>
+    ),
+    gradient: "from-fuchsia-100 to-purple-100",
+    icon: <PenLine className="w-6 h-6 text-fuchsia-600" />
+  },
+  {
+    title: "Admin & operations teams",
+    richDescription: (
+      <div className="text-sm text-slate-600 leading-relaxed">
+        Fill repetitive <span className="font-medium text-slate-800 bg-slate-100 px-1.5 py-0.5 rounded-md leading-6 inline-block mx-0.5 border border-slate-200/60">onboarding</span>, <span className="font-medium text-slate-800 bg-slate-100 px-1.5 py-0.5 rounded-md leading-6 inline-block mx-0.5 border border-slate-200/60">vendor</span>, and <span className="font-medium text-slate-800 bg-slate-100 px-1.5 py-0.5 rounded-md leading-6 inline-block mx-0.5 border border-slate-200/60">internal paperwork</span> faster by reusing the same <span className="font-medium text-slate-800 bg-slate-100 px-1.5 py-0.5 rounded-md leading-6 inline-block mx-0.5 border border-slate-200/60">client</span>, <span className="font-medium text-slate-800 bg-slate-100 px-1.5 py-0.5 rounded-md leading-6 inline-block mx-0.5 border border-slate-200/60">company</span>, and <span className="font-medium text-slate-800 bg-slate-100 px-1.5 py-0.5 rounded-md leading-6 inline-block mx-0.5 border border-slate-200/60">form details</span> across systems.
       </div>
     ),
     gradient: "from-amber-100 to-orange-100",
@@ -51,10 +47,9 @@ const useCases = [
   },
   {
     title: "Personal applications",
-    description: null,
     richDescription: (
       <div className="text-sm text-slate-600 leading-relaxed">
-        From <span className="font-medium text-slate-800 bg-slate-100 px-1.5 py-0.5 rounded-md leading-6 inline-block mx-0.5 border border-slate-200/60">insurance quotes</span> to <span className="font-medium text-slate-800 bg-slate-100 px-1.5 py-0.5 rounded-md leading-6 inline-block mx-0.5 border border-slate-200/60">rental applications</span> and <span className="font-medium text-slate-800 bg-slate-100 px-1.5 py-0.5 rounded-md leading-6 inline-block mx-0.5 border border-slate-200/60">loan forms</span>, reuse your information instead of filling in the same details every time.
+        Reuse your details across <span className="font-medium text-slate-800 bg-slate-100 px-1.5 py-0.5 rounded-md leading-6 inline-block mx-0.5 border border-slate-200/60">insurance quotes</span>, <span className="font-medium text-slate-800 bg-slate-100 px-1.5 py-0.5 rounded-md leading-6 inline-block mx-0.5 border border-slate-200/60">rental applications</span>, <span className="font-medium text-slate-800 bg-slate-100 px-1.5 py-0.5 rounded-md leading-6 inline-block mx-0.5 border border-slate-200/60">loan forms</span>, and other life admin instead of typing the same information every time.
       </div>
     ),
     gradient: "from-rose-100 to-pink-100",
@@ -62,12 +57,9 @@ const useCases = [
   },
   {
     title: "Always up to date",
-    description: null,
     richDescription: (
       <div className="text-sm text-slate-600 leading-relaxed">
-        <span className="font-medium text-slate-800 bg-slate-100 px-1.5 py-0.5 rounded-md leading-6 inline-block mx-0.5 border border-slate-200/60 mb-2">Changed jobs</span> <span className="font-medium text-slate-800 bg-slate-100 px-1.5 py-0.5 rounded-md leading-6 inline-block mx-0.5 border border-slate-200/60 mb-2">moved cities</span> or <span className="font-medium text-slate-800 bg-slate-100 px-1.5 py-0.5 rounded-md leading-6 inline-block mx-0.5 border border-slate-200/60 mb-2">updated certifications</span>?
-        <br />
-        <span className="font-semibold text-slate-800"><LearnAndFill /></span> keeps your profile current so future forms use your latest information.
+        <span className="font-medium text-slate-800 bg-slate-100 px-1.5 py-0.5 rounded-md leading-6 inline-block mx-0.5 border border-slate-200/60">Changed jobs</span>, <span className="font-medium text-slate-800 bg-slate-100 px-1.5 py-0.5 rounded-md leading-6 inline-block mx-0.5 border border-slate-200/60">moved cities</span>, <span className="font-medium text-slate-800 bg-slate-100 px-1.5 py-0.5 rounded-md leading-6 inline-block mx-0.5 border border-slate-200/60">updated certifications</span>, or refined your profile? <span className="font-semibold text-slate-800"><LearnAndFill /></span> keeps future forms aligned with your latest information.
       </div>
     ),
     gradient: "from-cyan-100 to-sky-100",
@@ -118,7 +110,7 @@ export function Problem() {
 
               <h4 className="text-xl font-bold text-slate-900 mb-4 relative z-10">{useCase.title}</h4>
               <div className="relative z-10 flex-1">
-                {useCase.richDescription || <p className="text-sm text-slate-600 leading-relaxed">{useCase.description}</p>}
+                {useCase.richDescription}
               </div>
             </motion.div>
           ))}
