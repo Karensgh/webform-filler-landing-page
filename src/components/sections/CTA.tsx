@@ -147,9 +147,9 @@ export function CTA() {
                                         </Button>
                                     </div>
                                 </form>
-                                <p className="text-sm text-slate-400">
+                                {/* <p className="text-sm text-slate-400">
                                     We&apos;re looking for our first 100 beta users. Early access is free.
-                                </p>
+                                </p> */}
                             </>
                         )}
                     </div>
