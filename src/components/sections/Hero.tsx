@@ -95,7 +95,7 @@ export function Hero() {
                     transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
                     className="text-sm text-slate-500 mb-8"
                 >
-                    Launching soon — join the waitlist for early access
+                    {/* Launching soon — join the waitlist for early access */}
                 </motion.p>
             </div>
         </section>
